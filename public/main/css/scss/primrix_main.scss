@@ -1,0 +1,422 @@
+@import 'config/_config.scss';
+@import 'partials/_prepare.scss';
+@import 'partials/_primrix_core.scss';
+@import 'partials/_primrix_sundry.scss';
+
+/*Main Template*/
+.page {
+	width: 90%;
+	margin: 1% 5% 1% 5%;
+	padding: 0 0 0 0;
+}
+.header {
+	width: 100%;
+	margin: 0 0 2% 0;
+	padding: 0 0 0 0;
+	float: left;
+	clear: both;
+}
+.header .hud {
+	width: 40%;
+	height: 141px;
+	float: left;
+	clear: none;
+	margin: 0 0 0 2%;
+}
+.hud .item {
+	width: 100%;
+	height: 30px;
+	text-align: left;
+	margin: 18px 0 0 0;
+	float: left;
+}
+.hud .item .icon {
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+	color: $pFgColour1;
+	float: left;
+	clear: none;
+	margin: 0 1% 0 0;
+}
+.hud .item .titleGrp {
+	width: auto;
+	height: 30px;
+	float: left;
+	clear: none;
+}
+.hud .item .titleGrp .title {
+	width: auto;
+	height: 22px;
+	font-size: 17px;
+	color: $pFtColour1;
+	float: left;
+	clear: none;
+}
+.hud .item .titleGrp .title a,
+.hud .item .titleGrp .title a:link,
+.hud .item .titleGrp .title a:visited {
+	text-decoration: none;
+	color: $pFtColour1;
+}
+.hud .item .titleGrp .title a:hover {
+	text-decoration: none;	
+	color: $pFt1Link_h;
+	cursor: pointer !important;
+}
+.hud .item .titleGrp .title a:active {
+	text-decoration: none;
+	color: $pFt1Link_d;
+	cursor: pointer !important;
+}
+.hud .item .titleGrp .detail {
+	width: auto;
+	height: 8px;
+	font-size: 10px;
+	color: $pFtColour2;
+	float: left;
+	clear: both;
+}
+.hud .item .infoGrx {
+	width: 206px;
+	height: 30px;
+	float: left;
+	clear: none;
+	margin: 5px 0 0 2%;
+	border-radius: 8px;
+	background-color: $pFgColour2;
+	text-align: center;
+	position: relative;
+}
+.hud .item .infoGrx .bar {
+	width: 0%;
+	padding-left: 3%;
+	height: 30px;
+	position: absolute;
+	z-index: 2;
+	background-color: $pFgColour1;
+	border-radius: 4px;
+}
+.hud .item .infoGrx .txt {
+	font-size: 22px;
+	color: $pBgColour1;
+	position: relative;
+	z-index: 3;
+}
+.hud .item .button {
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+	color: $pFgColour1;
+	float: left;
+	clear: none;
+	margin: 0 0 0 1%;
+}
+.hud .item .button a,
+.hud .item .button a:link,
+.hud .item .button a:visited {
+	text-decoration: none;
+	color: $pFtColour1;
+}
+.hud .item .button a:hover {
+	text-decoration: none;	
+	color: $pFt1Link_h;
+	cursor: pointer !important;
+}
+.hud .item .button a:active {
+	text-decoration: none;
+	color: $pFt1Link_d;
+	cursor: pointer !important;
+}
+.header .calendar {
+	width: 10%;
+	height: 141px;
+	float: right;
+	clear: none;
+	margin: 0 0 0 1%;
+}
+.calendar .border {
+	width: 103px;
+	height: 105px;
+	border: solid 5px $pBgColour2;
+	text-align: center;
+	border-radius: 8px;
+	background-color: $pBgColour2;
+	float: right;
+	box-shadow: 0 0 5px 2px $pBgColour3;
+}
+.calendar .border .date {
+	width: 103px;
+	height: 71px;
+	background-color: $pFgColour2;
+	border-radius: 8px 8px 0 0;
+}
+.calendar .border .date .day {
+	width: 103px;
+	height: auto;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0; 
+	color: $pBgColour1;
+	font-size: 55px;
+}
+.calendar .border .date .day .suf {
+	color: $pBgColour1;
+	font-size: 18px;
+}
+.calendar .border .month {
+	width: 103px;
+	height: 29px;
+	padding: 5px 0 0 0;
+	background-color: $pFgColour1;
+	color: $pFgColour2;
+	font-size: 18px;
+	border-radius: 0 0 8px 8px;
+}
+.calendar .primrix {
+	width: 113px;
+	height: auto;
+	margin-top: 14px;
+	text-align: center;
+	float: right;
+	font-size: 12px;
+	color: $pBgColour3;
+}
+.calendar .primrix .primrix-primrix2 {
+	font-size: 12px;
+}
+.header .welcomeBar {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.welcomeBar .hello {
+	width: 15%;
+	float: left;
+	margin: 2% 0 0 0%;
+	font-size: 14px;
+	color: $pFtColour2;
+}
+.welcomeBar .lineGrp {
+	width: 83%;
+	height: auto;
+	float: left;
+	margin: 2% 0 0 2%;
+}
+.welcomeBar .mlines {
+	width: 100%;
+	height: 21px;
+	float: left;
+	clear: both;
+}
+.welcomeBar .mline1 {
+	width: 100%;
+	height: 9px;
+	float: left;
+	margin-bottom: 3px;
+	background-color: $pFgColour1;
+}
+.welcomeBar .mline2 {
+	width: 100%;
+	height: 9px;
+	float: left;
+	background-color: $pFgColour2;
+}
+.container {
+	width: 100%;
+	margin: 0 0 2% 0;
+	padding: 0 0 0 0;
+	clear: both;
+	float: left;
+}
+.navGrp {
+	float: left;
+	width: 15%;
+}
+.navCap {
+	width: 100%;
+	height: 40px;
+	float: left;
+	clear: both;
+	margin: 0 0 40px 0;
+	padding: 20px 0 0 0;
+	border-radius: 8px;
+	background-color: $pBgColour2;
+}
+.navigation {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	margin: 0 0 0 0;
+	padding: 20px 0 0 0;
+	border-radius: 8px;
+	background-color: $pBgColour2;
+	box-shadow: inset 0 0 5px 2px $pBgColour3;
+}
+.navigation .selected {
+	color: $MenuSelect;
+}
+.navigation .item {
+	width: 79%;
+	height: auto;
+	padding: 0 8% 20px 8%;
+	float: left;
+	clear: both;
+	text-align: left;
+	color: $pFtColour2;
+}
+.navigation .item p {
+	margin: 0 0 0 0;
+	padding: 8px 0 0 0;
+	color: inherit;
+	font-size: 12px;
+	display: inline;
+	float: left;
+}
+.navigation .item span {
+	width: 40px;
+	margin-right: 15px;
+	font-size: 30px;
+	color: inherit;
+	display: inline;
+	float: left;
+}
+.navigation .subGrp {
+	width: 100%;
+	float: left;
+	clear: both;
+	background-color: $pBgColour3;
+	padding: 20px 0 0 0;
+	margin: 0 0 20px 0;
+	display: none;
+}
+.navigation .subGrp .subItem {
+	width: 79%;
+	height: auto;
+	padding: 0 8% 20px 8%;
+	float: left;
+	clear: both;
+	text-align: left;
+	color: $pFtColour2;
+}
+.navigation .subGrp .subItem p {
+	margin: 0 0 0 0;
+	padding: 4px 0 0 0;
+	color: inherit;
+	font-size: 12px;
+	display: inline;
+	float: left;
+}
+.navigation .subGrp .subItem span {
+	width: 40px;
+	margin-right: 15px;
+	font-size: 20px;
+	color: inherit;
+	display: inline;
+	float: left;
+}
+.worktop {
+	width: 83%;
+	height: auto;
+	float: left;
+	margin: 0 0 0 2%;
+}
+.worktop .crumbs {
+	width: 96%;
+	height: 40px;
+	float: left;
+	clear: both;
+	margin: 0 2% 40px 0;
+	padding: 20px 2% 0 2%;
+	border-radius: 8px;
+	background-color: $pBgColour2;
+}
+.worktop .submitRow {
+	width: 100%;
+	height: auto;
+	margin: 0 0 20px 0;
+	text-align: right;
+}
+.worktop .twoThirdsColumn {
+	width: 73%;
+	height: auto;
+	float: left;
+	clear: none;
+	padding-left: 2%;
+}
+.worktop .twoColumns {
+	width: 50%;
+	height: auto;
+	float: left;
+	clear: none;
+}
+.worktop .threeColumns {
+	width: 33.3%;
+	height: auto;
+	float: left;
+	clear: none;
+}
+.worktop .fourColumns {
+	width: 25%;
+	height: auto;
+	float: left;
+	clear: none;
+}
+.worktop .fieldNotes {
+	width: auto;
+	height: auto;
+	margin: 0 0 40px 0;
+	border-radius: 8px;
+	color: $pFt1Link_h;
+	text-align: left;
+}
+.worktop .fieldNotes .fa {
+	font-size: 16px;
+	color: $pFgColour2;
+	margin: 0 10px 0 0;
+}
+/*Footers*/
+.footer {
+	width: 100%;
+	float: left;
+	clear: both;
+	margin: 0 0 2% 0;
+	padding: 0 0 0 0;
+}
+.footerLines {
+	width: 100%;
+	height: 21px;
+	float: left;
+	clear: both;
+}
+.footerLines .fLine1 {
+	width: 100%;
+	height: 9px;
+	float: left;
+	margin-bottom: 3px;
+	background-color: $pBgColour2;
+}
+.footerLines .fLine2 {
+	width: 100%;
+	height: 9px;
+	float: left;
+	background-color: $pBgColour2;	
+}
+.legal {
+	height: auto;
+	width: auto;
+	float: right;
+	clear: both;
+	text-align: right;
+	color: $pBgColour2;
+	margin-top: 18px;	
+}
+.faSmall{
+	font-size: 14px !important;
+	padding: 0 2px;
+}
+.faSmallR{
+	font-size: 14px !important;
+	float: right !important;
+	padding: 0 2px;
+}

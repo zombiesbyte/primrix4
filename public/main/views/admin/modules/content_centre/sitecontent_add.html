@@ -1,0 +1,74 @@
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:uri}
+		{error:name}
+		{error:blueprint}
+		{error:active}
+	</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Content Centre <span class="fa fa-share"></span> Site Content <span class="fa fa-share"></span> Edit Page</h2>
+		</div><!--crumbs-->
+
+		<div class="twoColumns">
+
+			<label>Page URN</label>
+			<input type="text" id="uri" name="uri" tabindex="1" placeholder="/my-page-name" alt="The URN should begin with a forward slash but <u>should not end in one</u>.<br><br>Please note that the URN can contain multiple segments if required<br><br>i.e. /my-page/sub-page/and-another<br><br> This can be useful for categorising sections and increasing keyword density for SEO purposes" value="{form:uri}">
+
+			<br style="clear:both;">
+
+			<label>Name</label>
+			<input type="text" id="name" name="name" tabindex="1" placeholder="My Page" alt="A short title to describe this page. This is not used publically and is only used to reference the page within Primrix CMS" value="{form:name}">
+			
+			<br style="clear:both;">
+
+			<label>HTML File</label>
+			<select name="template" id="template" name="template" tabindex="1" alt="Select a template HTML file to use">
+				<option value="">Please select</option>
+			</select>
+
+			<br style="clear:both;">
+
+			<p class="left">- OR -</p>
+
+			<br style="clear:both;">
+
+			<label>Blueprint</label>
+			<select name="blueprint" id="blueprint" name="blueprint" tabindex="1" alt="Select a page blueprint">
+				<option value="">Please select</option>
+				{blueprintOptions}
+			</select>			
+
+		</div><!--twoColumns-->
+
+		<div class="twoColumns">
+
+			<fieldset>
+				<legend>Active</legend>
+				<input type="radio" id="active" name="active" tabindex="1" value="y" alt="Set as active"{form:active:y}><label for="active" class="freeStyleLabel">Active</label>
+				<input type="radio" id="active" name="active" tabindex="1" value="n" alt="Set as inactive"{form:active:n}><label for="active" class="freeStyleLabel">Inactive</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>User Rights</legend>
+
+				{checkboxRights}
+
+			</fieldset>
+			
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--twoColumns-->
+
+	</form>
+</div><!--worktop-->

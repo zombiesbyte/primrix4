@@ -1,0 +1,40 @@
+<div class="worktop">
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Social Media <span class="fa fa-share"></span> Social Badges</h2>
+		</div><!--crumbs-->
+
+		<table id="menumanager">
+			<thead>
+				<tr>
+					<th class="small"><a data-order="top" class="order fa fa-angle-double-up" alt="Move selected to top"></a></th>
+					<th class="small"><a data-order="bottom" class="order fa fa-angle-double-down" alt="Move selected to bottom"></a></th>
+					<th class="small"><input type="checkbox" class="selectall-selection" alt="Select/Unselect all"></th>
+					<th class="small">Badge</th>
+					<th class="txtLeft">Name</th>
+					<th class="txtLeft">Link</th>
+					<th class="small"><a class="toggleActiveGrp fa fa-check-square-o" alt="Activate/Deactivate selected"></a></th>
+					<th class="small"><a class="fa fa-users" alt="Edit selected"></a></th>
+					<th class="small"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{table_rows}
+
+			</tbody>
+
+		</table>
+
+		<div class="submitRow">
+			<button type="submit" id="delete" name="delete" alt="Remove selected" tabindex="1">
+				<span class="fa fa-trash-o"></span> Remove
+			</button>
+			<button type="submit" id="add" name="add" alt="Add a new menu/submenu" tabindex="1">
+				<span class="fa fa-plus-square"></span> Add
+			</button>
+		</div><!--submitRow-->
+	</form>
+</div><!--worktop-->

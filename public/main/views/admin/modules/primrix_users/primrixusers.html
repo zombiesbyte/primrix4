@@ -1,0 +1,39 @@
+<div class="worktop">
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Primrix Users <span class="fa fa-share"></span> User Manager</h2>
+		</div><!--crumbs-->
+
+		<table id="menumanager">
+			<thead>
+				<tr>
+					<th class="small"><input type="checkbox" class="selectall-selection" alt="Select/Unselect all"></th>
+					<th class="txtLeft">Username</th>
+					<th class="txtLeft">First Name</th>
+					<th class="txtLeft">Last Name</th>
+					<th class="txtLeft">Email Address</th>
+					<th class="small"><a class="toggleActiveGrp fa fa-check-square-o" alt="Activate/Deactivate selected"></a></th>
+					<th class="small"><a class="fa fa-users" alt="Edit selected"></a></th>
+					<th class="small"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{table_rows}
+
+			</tbody>
+
+		</table>
+
+		<div class="submitRow">
+			<button type="submit" id="delete" name="delete" alt="Remove selected" tabindex="1">
+				<span class="fa fa-trash-o"></span> Remove
+			</button>
+			<button type="submit" id="add" name="add" alt="Add a new menu/submenu" tabindex="1">
+				<span class="fa fa-plus-square"></span> Add
+			</button>
+		</div><!--submitRow-->
+	</form>
+</div><!--worktop-->

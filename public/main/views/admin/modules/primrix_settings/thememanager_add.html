@@ -1,0 +1,315 @@
+<script type="text/javascript">
+	$prefs = Array();
+	$(function(){
+		setStdColourPicker('#pBgColour1');
+		setStdColourPicker('#pBgColour2');
+		setStdColourPicker('#pBgColour3');
+		setStdColourPicker('#pFgColour1');
+		setStdColourPicker('#pFgColour2');
+
+		setStdColourPicker('#pFtColour1');
+		setStdColourPicker('#pFt1Link_h');
+		setStdColourPicker('#pFt1Link_d');
+
+		setStdColourPicker('#pFtColour2');
+		setStdColourPicker('#pFt2Link_h'); //captcha font colour
+		setStdColourPicker('#pFt2Link_d');
+
+		setStdColourPicker('#pToolTipBg');
+		setStdColourPicker('#MenuSelect');
+		setStdColourPicker('#tableRow_h');
+
+		setStdColourPicker('#pFormBtnUp');
+
+		initThemeBox();
+
+		$('.themePicker').change(function(){
+			$prefs[$(this).attr('id')] = $(this).val();
+			updateThemeBox();
+		});
+
+	});
+
+	function initThemeBox()
+	{
+		$('.themePicker').each(function(i, obj){
+			$prefs[$(this).attr('id')] = $(this).val();
+		});
+
+		updateThemeBox();
+	}
+
+	function updateThemeBox()
+	{
+		$('#themeBox').css('background-color', $prefs['pBgColour1']);
+		$('#tBCrumbs').css('background-color', $prefs['pBgColour2']);
+		$('#tBCrumbs h2').css('color', $prefs['pFgColour1']);
+		$('#tBCrumbs h2 .fa').css('color', $prefs['pFgColour2']);
+
+		$('#tBLogo').css('box-shadow', '0 0 5px 2px ' + $prefs['pBgColour3']);
+		$('#tBLogo').css('background-color', $prefs['pBgColour2']);
+		$('#tBLine1').css('background-color', $prefs['pFgColour1']);
+		$('#tBLine2').css('background-color', $prefs['pFgColour2']);
+
+
+
+		$('.tBTH').css('color', $prefs['pFgColour2']);
+		$('.tBTH').css('background-color', $prefs['pFgColour1']);
+
+		$('.tBTH').hover(function(){ $(this).find('a').css('color', $prefs['pBgColour2']); });
+		$('.tBTH').mouseleave(function(){ $(this).find('a').css('color', $prefs['pFgColour2']); });
+
+		$('tr').hover(function(){ $(this).find('td').css('background-color', $prefs['tableRow_h']); });
+
+		$('.tBPrimary').css('color', $prefs['pFtColour1']);
+		$('.tBPrimary').css('background-color', $prefs['pBgColour3']);
+		$('tr').mouseleave(function(){ $(this).find('.tBPrimary').css('background-color', $prefs['pBgColour3']); });
+
+		$('.tBTD').css('color', $prefs['pFtColour2']);
+		$('.tBTD').css('background-color', $prefs['pBgColour2']);
+		$('tr').mouseleave(function(){ $(this).find('.tBTD').css('background-color', $prefs['pBgColour2']); });
+
+		$('#tBLink a').css('color', $prefs['pFtColour2']);
+		$('#tBLink a').hover(function(){ $(this).css('color', $prefs['pFt1Link_h']); });
+		$('#tBLink a').mousedown(function(){ $(this).css('color', $prefs['pFt1Link_d']); });
+		$('#tBLink a').mouseleave(function(){ $(this).css('color', $prefs['pFtColour2']); });
+
+		$('#tBPara').css('color', $prefs['pFgColour2']);
+
+		$('#doNothing').css('color', $prefs['pFgColour2']);
+		$('#doNothing').css('background-color', $prefs['pFormBtnUp']);
+
+		$prefs['pToolTipBg_rgb'] = hexToRgb($prefs['pToolTipBg']).rgb;
+		$('#tBToolTip').css('background','linear-gradient(to right, rgba(' + $prefs['pToolTipBg_rgb'] + ', 0.95) 0%, rgba(' + $prefs['pToolTipBg_rgb'] + ', 0.95) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)');
+
+		$('#tBMenuSelect').css('color', $prefs['MenuSelect']);
+
+		$('#tBNav').css('box-shadow', '0 0 5px 2px ' + $prefs['pBgColour3'] + ' inset');
+		$('#tBNav').css('background-color', $prefs['pBgColour2']);
+		
+		$('#tBwelcomeBarHello').css('color', $prefs['pFtColour2']);
+
+
+	}
+</script>
+
+<div class="worktop">
+
+<div class="errorBox">
+	{error:name}
+	{error:author}
+	{error:pBgColour1}
+	{error:pBgColour2}
+	{error:pBgColour3}
+	{error:pFgColour1}
+	{error:pFgColour2}
+	{error:pFtColour1}
+	{error:pFt1Link_h}
+	{error:pFt1Link_d}
+	{error:pFtColour2}
+	{error:pToolTipBg}
+	{error:MenuSelect}
+	{error:tableRow_h}
+	{error:pFormBtnUp}
+</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Primrix Settings <span class="fa fa-share"></span> Theme Manager <span class="fa fa-share"></span> Edit Theme</h2>
+		</div><!--crumbs-->
+
+
+		<div class="twoThirdsColumn">
+			<div class="themeBox" id="themeBox" style="width: 90%; border: solid 1px #000000; border-radius: 8px; padding: 2%; float:left; margin-left:-2.5%;">
+			
+				<div class="crumbs" id="tBCrumbs" style="margin: 0px;"><h2><span class="fa fa-folder-open"></span> Theme Preview Box</h2></div><!--crumbs-->
+
+				<div class="welcomeBar">
+					<div class="hello" id="tBwelcomeBarHello">Preview</div>
+					<div class="lineGrp">
+						<div class="mlines">
+							<div class="mline1" id="tBLine1"></div>
+							<div class="mline2" id="tBLine2"></div>
+						</div><!--lines-->
+					</div><!--lineGrp-->
+				</div><!--welcomeBar-->
+
+				<br style="clear:both;"><br style="clear:both;">
+
+				<table id="menumanager">
+					<thead>
+						<tr>
+							<th class="small tBTH" ><a><span class="fa fa-folder-open"></span></a></th>			
+							<th class="txtLeft tBTH">Table Heading</th>
+						</tr>
+					</thead>
+
+					<tbody>
+
+						<tr>
+							<td class="small primary tBPrimary"><span class="fa fa-folder-open"></span></td>
+							<td class="txtLeft primary tBPrimary">Priority Row</td>
+						</tr>
+						<tr>
+							<td class="small tBTD"><span class="fa fa-folder-open"></span></td>
+							<td class="txtLeft tBTD">Default Row</td>
+						</tr>
+						
+					</tbody>
+
+				</table>
+				
+				<div class="cmsIcon" id="tBLogo" style="margin-right: 20px"></div>
+
+				<p id="tBPara">Example paragraph text... It was all very well to say 'Drink me,' but the wise little Alice was  not going to do 
+				THAT in a hurry. 'No, I'll look first,' she said, 'and  see whether it's marked "poison" or not'; for she had read 
+				several nice  little histories about children who had got burnt, and eaten up by wild  beasts and other unpleasant 
+				things, all because they WOULD not remember  the simple rules their friends had taught them: such as, that a red-hot  
+				poker will burn you if you hold it too long; and that if you cut your  finger VERY deeply with a knife, it usually 
+				bleeds; and she had never  forgotten that, if you drink much from a bottle marked 'poison,' it is  almost certain to 
+				disagree with you, sooner or later.</p>
+				
+				<div class="navigation" style="width: 260px; float:left; clear:none; margin-right: 20px;" id="tBNav">
+					<div id="dashboard" class="item">
+						<a class="selected" alt="Primrix Dashboard" style="" id="tBMenuSelect">
+							<span class="fa fa-th-large"></span><p>Selected Menu Item</p>
+						</a>
+					</div>
+				</div>
+
+				<div class="submitRow">
+					<p style="float:left; clear:none;" id="tBLink"><a>An example Link</a></p>
+					<button type="submit" id="doNothing" name="doNothing" tabindex="1" onclick="return false;">
+						<span class="fa fa-plus-square"></span> Example
+					</button>
+					<div id="tBToolTip" class="primrixToolTip" style="display:block; position: relative; left: 100px; top: 0px;">A Tool Tip</div>
+				</div><!--submitRow-->
+
+			</div><!--themeBox-->
+
+		</div><!--twoThirdsColumn-->
+		
+		<div class="fourColumns">
+			<div style="float:right">
+				<label>Theme Name</label>
+				<input type="text" id="name" name="name" tabindex="1" value="{form:name}" placeholder="Theme Name" alt="The name of the theme">
+
+				<br style="clear:both;">
+
+				<label>Author</label>
+				<input type="text" id="author" name="author" tabindex="1" value="{form:author}" placeholder="Author Name" alt="The name of the author">
+
+				<br style="clear:both;">
+
+				<label>pBgColour1</label>
+				<div class="iconPreview">
+					<input type="text" id="pBgColour1" name="pBgColour1" class="themePicker" tabindex="1" value="{form:pBgColour1}" placeholder="#000000" alt="The page background colour">
+				</div><!--iconPreview-->
+
+				<br style="clear:both;">
+
+				<label>pBgColour2</label>
+				<div class="iconPreview">
+					<input type="text" id="pBgColour2" name="pBgColour2" class="themePicker" tabindex="1" value="{form:pBgColour2}" placeholder="#000000" alt="The background colour of the breadcrumb box, logo box and default table row">
+				</div><!--iconPreview-->
+
+				<br style="clear:both;">
+
+				<label>pBgColour3</label>
+				<div class="iconPreview">
+					<input type="text" id="pBgColour3" name="pBgColour3" class="themePicker" tabindex="1" value="{form:pBgColour3}" placeholder="#000000" alt="The background colour of a priority table row and the shadow effects">
+				</div><!--iconPreview-->
+
+				<br style="clear:both;">
+
+				<label>pFgColour1</label>
+				<div class="iconPreview">
+					<input type="text" id="pFgColour1" name="pFgColour1" class="themePicker" tabindex="1" value="{form:pFgColour1}" placeholder="#000000" alt="The background colour or table heading and the colour of the first line">
+				</div><!--iconPreview-->
+
+				<br style="clear:both;">
+
+				<label>pFgColour2</label>
+				<div class="iconPreview">
+					<input type="text" id="pFgColour2" name="pFgColour2" class="themePicker" tabindex="1" value="{form:pFgColour2}" placeholder="#000000" alt="The paragraph font colour, button text and the second line">
+				</div><!--iconPreview-->
+			</div>
+		</div><!--fourColumns-->
+
+		<br style="clear:both;"><br style="clear:both;">
+
+		<div class="threeColumns">
+
+			<label>pFtColour1</label>
+			<div class="iconPreview">
+				<input type="text" id="pFtColour1" name="pFtColour1" class="themePicker" tabindex="1" value="{form:pFtColour1}" placeholder="#000000" alt="The font colour of a priority table row">
+			</div><!--iconPreview-->
+
+			<br style="clear:both;">
+
+			<label>pFt1Link_h</label>
+			<div class="iconPreview">
+				<input type="text" id="pFt1Link_h" name="pFt1Link_h" class="themePicker" tabindex="1" value="{form:pFt1Link_h}" placeholder="#000000" alt="The hover colour of links within paragraph text">
+			</div><!--iconPreview-->
+
+			<br style="clear:both;">
+
+			<label>pFt1Link_d</label>
+			<div class="iconPreview">
+				<input type="text" id="pFt1Link_d" name="pFt1Link_d" class="themePicker" tabindex="1" value="{form:pFt1Link_d}" placeholder="#000000" alt="The active colour of links within paragraph text i.e. when clicking a link">
+			</div><!--iconPreview-->
+
+			<br style="clear:both;">
+
+			<label>pFtColour2</label>
+			<div class="iconPreview">
+				<input type="text" id="pFtColour2" name="pFtColour2" class="themePicker" tabindex="1" value="{form:pFtColour2}" placeholder="#000000" alt="The font colour of links, welcome text and default table row text">
+			</div><!--iconPreview-->
+
+		</div><!--threeColumns-->			
+
+		<div class="threeColumns">
+
+			<label>pToolTipBg</label>
+			<div class="iconPreview">
+				<input type="text" id="pToolTipBg" name="pToolTipBg" class="themePicker" tabindex="1" value="{form:pToolTipBg}" placeholder="#000000" alt="The tool tips background colour (95% opacity will be used)">
+			</div><!--iconPreview-->
+
+			<br style="clear:both;">
+
+			<label>MenuSelect</label>
+			<div class="iconPreview">
+				<input type="text" id="MenuSelect" name="MenuSelect" class="themePicker" tabindex="1" value="{form:MenuSelect}" placeholder="#000000" alt="The colour of a menu item when it is shown as currently active">
+			</div><!--iconPreview-->
+
+			<br style="clear:both;">
+
+			<label>tableRow_h</label>
+			<div class="iconPreview">
+				<input type="text" id="tableRow_h" name="tableRow_h" class="themePicker" tabindex="1" value="{form:tableRow_h}" placeholder="#000000" alt="The colour of a hovered table row">
+			</div><!--iconPreview-->
+
+			<br style="clear:both;">
+
+			<label>pFormBtnUp</label>
+			<div class="iconPreview">
+				<input type="text" id="pFormBtnUp" name="pFormBtnUp" class="themePicker" tabindex="1" value="{form:pFormBtnUp}" placeholder="#000000" alt="The colour of our buttons (rest state)">
+			</div><!--iconPreview-->
+
+		</div><!--threeColumns-->
+
+		<div class="threeColumns">
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

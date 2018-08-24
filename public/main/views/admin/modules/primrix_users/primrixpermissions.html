@@ -1,0 +1,39 @@
+<div class="worktop">
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Primrix Users <span class="fa fa-share"></span> Permissions Manager</h2>
+		</div><!--crumbs-->
+
+		<table>
+			<thead>
+				<tr>
+					<th class="small"><input type="checkbox" class="selectall-selection" alt="Select/Unselect all"></th>
+					<th class="txtLeft">Group Name</th>
+					<th class="txtLeft">Colour</th>
+					<th class="txtLeft">Compulsory</th>
+					<th class="small"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{table_rows}
+
+			</tbody>
+
+		</table>
+
+		<div class="submitRow">
+			<button type="submit" id="delete" name="delete" alt="Remove selected" tabindex="1">
+				<span class="fa fa-trash-o"></span> Remove
+			</button>
+			<button type="submit" id="add" name="add" alt="Add a new permission" tabindex="1">
+				<span class="fa fa-plus-square"></span> Add
+			</button>
+		</div><!--submitRow-->
+
+		<p>Please note: Primrix Admin is a special system permission group and can not be deleted or changed (except for the group colour).</p>
+
+	</form>
+</div><!--worktop-->

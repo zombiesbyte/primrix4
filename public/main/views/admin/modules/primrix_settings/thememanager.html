@@ -1,0 +1,50 @@
+<div class="worktop">
+
+<div class="errorBox">
+	{idError}
+	{error:file}
+</div>
+	<form method="post" action="" id="form1" enctype="multipart/form-data">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Primrix Settings <span class="fa fa-share"></span> Theme Manager</h2>
+		</div><!--crumbs-->
+
+		<table id="menumanager">
+			<thead>
+				<tr>
+					<th class="small"><input type="checkbox" class="selectall-selection" alt="Select/Unselect all"></th>			
+					<th class="txtLeft">Theme Name</th>
+					<th class="txtLeft">Author</th>
+					<th class="small"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{table_rows}
+
+			</tbody>
+
+		</table>
+
+		<div class="submitRow">
+			<input type="file" id="file" name="file" style="float: left; margin-right: 3px;" tabindex="1" alt="Please select a file to upload">
+			<button type="submit" id="import" name="import" style="float: left; margin-right: 3px;" alt="Upload Selected" tabindex="1">
+				<span class="fa fa-upload"></span> Import
+			</button>
+			<button type="submit" id="export" name="export" style="float: left; margin-right: 3px;" alt="Export selected" tabindex="1">
+				<span class="fa fa-upload"></span> Export
+			</button>
+			<button type="submit" id="apply" name="apply" alt="Apply selected theme" tabindex="1">
+				<span class="fa fa-check"></span> Apply
+			</button>
+			<button type="submit" id="delete" name="delete" alt="Remove selected" tabindex="1">
+				<span class="fa fa-trash-o"></span> Remove
+			</button>
+			<button type="submit" id="add" name="add" alt="Add a new menu/submenu" tabindex="1">
+				<span class="fa fa-plus-square"></span> Add
+			</button>
+		</div><!--submitRow-->
+	</form>
+</div><!--worktop-->

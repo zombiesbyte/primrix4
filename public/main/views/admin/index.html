@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!--[if IE 9]><html class="lt-ie10" lang="en"><![endif]-->
+<html class="no-js" lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link href="/main/css/primrix_main.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="/main/css/primrix_forms.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="/main/css/brand.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="/main/css/primrix_fileview.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="screen">
+
+		<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+		<link href="/vendor/fortawesome/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="/main/fonts/icomoon.css" rel="stylesheet">
+		<link rel='stylesheet' href='/vendor/primrix/spectrum/spectrum.css'>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+		<script src="/main/scripts/primrix.js"></script>
+		<script src='/vendor/primrix/spectrum/spectrum.js'></script>
+
+		<title>Test</title>
+	</head>
+
+	<body>
+
+		<div class="errorBox">
+
+		</div>
+
+		<div class="page">			
+			<div class="header">
+				<div class="cmsIcon"></div>				
+				
+				<div class="hud">
+
+					<div class="item">
+						<div class="icon"><span class="fa fa-globe"></span></div>
+						<div class="titleGrp">
+							<div class="title"><a href="http://www.website.com" target="_blank">www.website.com</a></div>
+							<div class="detail">Click to open in a new window</div>
+						</div><!--titleGrp-->
+					</div><!--item-->
+
+					<br style="clear:both;"><br style="clear:both;">
+
+					<div class="item">
+						<div class="icon"><span class="fa fa-clock-o"></span></div>						
+						<div class="titleGrp">
+							<div class="title">Session Time</div>
+							<div class="detail">{sessionMinsRemaining}</div>
+						</div><!--titleGrp-->
+						<div class="infoGrx" alt="{sessionPercent}% Used Session Time<br>({sessionRemaining})">
+							<div class="bar" style="width: {sessionPercent}%;"></div>
+							<div class="txt">{sessionPercent}%</div>
+						</div>					
+						<div class="button"><a href="/admin/logout" alt="Logout"><span class="fa fa-sign-out"></span></a></div>
+					</div><!--item-->
+
+				</div><!--hud-->
+
+				<div class="calendar">					
+					<div class="border" alt="<?php echo date('jS F Y'); ?>">
+						<div class="date">
+							<div class="day"><?php echo date('j'); ?><span class="suf"><?php echo date('S'); ?></span></div>
+						</div>
+						<div class="month"><?php echo date('M'); ?></div>
+					</div>
+					<div class="primrix"><span class="primrix-primrix" alt="Primrix">&nbsp;</span> Primrix CMS</div>
+				</div><!--calendar-->
+
+				<div class="welcomeBar">
+					<div class="hello">Welcome back, {userFirstName}</div>
+					<div class="lineGrp">
+						<div class="mlines">
+							<div class="mline1"></div>
+							<div class="mline2"></div>
+						</div><!--lines-->
+					</div><!--lineGrp-->
+				</div><!--welcomeBar-->
+
+			</div><!--header-->
+			
+			<div class="container">
+
+				<div class="navGrp">
+					
+					<div class="navCap"><a href="http://www.primrix.com" target="_blank"><span class="fa fa-life-ring fa-2x" style="float: left; margin-left: 16px;" alt="Get help with this page"></span> <span style="float: left; margin: 2px 8px;">Need Help?</span></a></div>
+
+					<div class="navigation">
+						{primrix_menu}
+					</div><!--navigation-->
+
+				</div><!--navGrp-->
+
+				{worktop}
+
+			</div><!--container-->
+
+			<div class="footer">
+				<div class="footerLines">
+					<div class="fLine1"></div>
+					<div class="fLine2"></div>
+				</div><!--lines-->
+				<div class="legal"><span class="primrix-primrix" alt="Primrix"></span>&nbsp; Copyright &copy; all rights reserved 2009 - <?php echo date('Y'); ?></div><!--legal-->
+			</div><!--footer-->
+		</div>
+	</body>
+</html>

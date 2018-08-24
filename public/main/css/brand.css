@@ -1,0 +1,30 @@
+@import 'config/_config.scss';
+@import 'config/_config.scss';
+@import 'partials/_prepare.scss';
+/*Brand*/
+.loginIcon {
+  width: 169px;
+  height: 141px;
+  float: left;
+  clear: none;
+  background-color: #073763;
+  background-image: url('/main/images/brand/login-icon.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none 0px #073763;
+  border-radius: 8px;
+  margin: 0 0 20px; }
+
+.cmsIcon {
+  width: 15%;
+  height: 141px;
+  float: left;
+  clear: none;
+  background-color: #073763;
+  background-image: url('/main/images/brand/login-icon.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 35%;
+  border: none 0px #073763;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 2px #031626; }

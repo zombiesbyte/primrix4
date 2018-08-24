@@ -1,0 +1,38 @@
+<div class="worktop">
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Site Options <span class="fa fa-share"></span> General Settings</h2>
+		</div><!--crumbs-->
+
+		<table id="menumanager">
+			<thead>
+				<tr>
+					<th class="small"><a data-order="top" class="order fa fa-angle-double-up" alt="Move selected to top"></a></th>
+					<th class="small"><a data-order="bottom" class="order fa fa-angle-double-down" alt="Move selected to bottom"></a></th>
+					<th class="small"><input type="checkbox" class="selectall-selection" alt="Select/Unselect all"></th>			
+					<th class="txtLeft">Setting Name</th>
+					<th class="txtLeft">Setting Value</th>
+					<th class="small"><a class="fa fa-users" alt="Edit selected"></a></th>
+					<th class="small"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{table_rows}
+
+			</tbody>
+
+		</table>
+
+		<div class="submitRow">
+			<button type="submit" id="delete" name="delete" alt="Remove selected" tabindex="1">
+				<span class="fa fa-trash-o"></span> Remove
+			</button>
+			<button type="submit" id="add" name="add" alt="Add a new setting" tabindex="1">
+				<span class="fa fa-plus-square"></span> Add
+			</button>
+		</div><!--submitRow-->
+	</form>
+</div><!--worktop-->

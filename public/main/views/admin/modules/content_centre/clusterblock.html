@@ -1,0 +1,37 @@
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:cluster_html}
+	</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2>
+				<span class="fa fa-folder-open"></span>Content Centre 
+				<span class="fa fa-share"></span> Page Content 
+				<span class="fa fa-share"></span> {clusterName} 
+				<span class="fa fa-share"></span> Edit HTML Block
+			</h2>
+		</div><!--crumbs-->
+
+		<div class="fieldNotes">
+			<span class="fa fa-info-circle"></span> Cluster variables can be referenced by wrapping them in wrappers i.e. {lWrapper}yourVariable{rWrapper}.<br>The cluster variables: {clusterVariables}
+		</div><!--fieldNotes-->
+
+		<textarea id="cluster_html" name="cluster_html" tabindex="1" placeholder="Insert your HTML code here together with the cluster variable references" style="width:97%; height:500px;">{form:cluster_html}</textarea>
+
+		<br style="clear:both;">
+		<br style="clear:both;">
+
+		<div class="submitRow">
+			<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+				<span class="fa fa-reply"></span> Cancel
+			</button>
+			<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+				<span class="fa fa-floppy-o"></span> Save
+			</button>
+		</div><!--submitRow-->
+
+	</form>
+</div><!--worktop-->

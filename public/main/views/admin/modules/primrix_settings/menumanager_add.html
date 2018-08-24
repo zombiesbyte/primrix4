@@ -1,0 +1,107 @@
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:group}
+		{error:name}
+		{error:menu_ref}
+		{error:menu_icon}
+		{error:menu_tip}
+		{error:menu_link}
+		{error:active}
+	</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Primrix Settings <span class="fa fa-share"></span> Menu Manager <span class="fa fa-share"></span> Edit Menu</h2>
+		</div><!--crumbs-->
+
+		<div class="threeColumns">
+
+			<label>Parent Group</label>
+			<select id="group" name="group" tabindex="1">
+				<option value="">Please select</option>
+				{parentOptions}
+			</select>
+
+			<br style="clear:both;">
+
+			<label>Menu Name</label>
+			<input type="text" id="name" name="name" tabindex="1" value="{form:name}" placeholder="Menu name" alt="This will appear as the shown text in the side menu">
+
+			<br style="clear:both;">
+
+			<label>Menu Reference</label>
+			<input type="text" id="menu_ref" name="menu_ref" tabindex="1" value="{form:menu_ref}" placeholder="i.e. menuRef" alt="This needs to be unique and is used as a code reference (alphanumeric characters only)">
+
+			<br style="clear:both;">
+
+			<label>Menu Icon</label>
+			<div class="iconPreview">
+				<div class="preview"></div>			
+				<input type="text" class="faIconPreview" id="menu_icon" name="menu_icon" tabindex="1" value="{form:menu_icon}" placeholder="i.e. fa fa-folder-open" alt="Pick a font awesome icon, don't forget to include the initial 'fa' class">
+			</div><!--iconPreview-->
+			
+			<br style="clear:both;">
+			<a href="http://fortawesome.github.io/Font-Awesome/icons/" class="fieldLink" target="_blank" alt="This opens in a new tab/window">Font Awesome Cheat Sheet</a>
+			<br style="clear:both;">			
+
+		</div><!--threeColumns-->
+		
+		<div class="threeColumns">
+
+			<label>Menu ToolTip</label>
+			<textarea type="text" id="menu_tip" name="menu_tip" tabindex="1" placeholder="What functionality does this menu option provide?" alt="Type a short ToolTip regarding the functionality of this menu option">{form:menu_tip}</textarea>
+
+			<br style="clear:both;">
+
+			<label>Module Link</label>
+			<input type="text" id="menu_link" name="menu_link" tabindex="1" value="{form:menu_link}" placeholder="i.e. /admin/example" alt="Please start with '/admin'">
+
+			<br style="clear:both;">
+
+		</div><!--threeColumns-->
+
+		<div class="threeColumns">
+
+			<fieldset>
+				<legend>Active</legend>
+				<input type="radio" id="active" name="active" tabindex="1" value="y" alt="Set as active"{form:active:y}><label for="active" class="freeStyleLabel">Active</label>
+				<input type="radio" id="active" name="active" tabindex="1" value="n" alt="Set as inactive"{form:active:n}><label for="active" class="freeStyleLabel">Inactive</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>User Rights</legend>
+
+				{checkboxRights}
+
+			</fieldset>
+			
+			<fieldset>
+				<legend>Options</legend>
+
+				<div class="grp">
+					<input type="checkbox" id="opens_new" name="opens_new" tabindex="1" value="y" alt="Open this link in a new tab?"{form:opens_new:y}>
+					<label for="rights" class="freeStyleLabel"><span style="color:#FFFFFF">Link open in a new tab?</span></label>
+				</div>
+
+				<div class="grp">
+					<input type="checkbox" id="dash" name="dash" tabindex="1" value="y" alt="Show on Dashboard?"{form:dash:y}>
+					<label for="rights" class="freeStyleLabel"><span style="color:#FFFFFF">Show on Dashboard?</span></label>
+				</div>
+
+			</fieldset>
+
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

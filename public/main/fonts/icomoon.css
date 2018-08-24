@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'primrix';
+	src:url('/main/fonts/primrix.eot?-17fm5n');
+	src:url('/main/fonts/primrix.eot?#iefix-17fm5n') format('embedded-opentype'),
+		url('/main/fonts/primrix.woff?-17fm5n') format('woff'),
+		url('/main/fonts/primrix.ttf?-17fm5n') format('truetype'),
+		url('/main/fonts/primrix.svg?-17fm5n#primrix') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="primrix-"], [class*=" primrix-"] {
+	font-family: 'primrix';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.primrix-primrix2:before {
+	content: "\e601";
+}
+.primrix-primrix:before {
+	content: "\e600";
+}

@@ -1,0 +1,55 @@
+<script type="text/javascript">
+	$(function(){
+		setStdColourPicker('#group_colour');
+	});
+</script>
+
+<div class="worktop">
+
+<div class="errorBox">
+	{error:group_name}
+	{error:group_colour}
+	{error:compulsory}
+</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Primrix Users <span class="fa fa-share"></span> Permissions Manager <span class="fa fa-share"></span> Edit Permission</h2>
+		</div><!--crumbs-->
+
+		<div class="threeColumns">
+
+			<label>Group Name</label>
+			<input type="text" id="group_name" name="group_name" tabindex="1" value="{form:group_name}" placeholder="Group Name" alt="The name of the permission group">
+
+			<br style="clear:both;">
+
+			<label>Colour</label>
+			<div class="iconPreview">
+				<input type="text" id="group_colour" name="group_colour" tabindex="1" value="{form:group_colour}" placeholder="#000000" alt="The colour associated with this permission group (as hexadecimal colour code)">
+			</div><!--iconPreview-->
+
+		</div><!--threeColumns-->
+		
+		<div class="threeColumns">
+
+			<fieldset>
+				<legend>Compulsory</legend>
+				<input type="radio" id="compulsory" name="compulsory" tabindex="1" value="y" alt="Set as compulsory"{form:compulsory:y}><label for="compulsory" class="freeStyleLabel">Yes</label>
+				<input type="radio" id="compulsory" name="compulsory" tabindex="1" value="n" alt="Set as compulsory"{form:compulsory:n}><label for="compulsory" class="freeStyleLabel">No</label>
+			</fieldset>
+
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

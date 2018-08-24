@@ -1,0 +1,42 @@
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:name}
+		{error:template}
+	</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Content Centre <span class="fa fa-share"></span> Site Content <span class="fa fa-share"></span> {pageName} <span class="fa fa-share"></span> Save Clusters</h2>
+		</div><!--crumbs-->
+
+		<div class="twoColumns">
+
+			<label>Profile Name</label>
+			<input type="text" id="name" name="name" tabindex="1" placeholder="general_content" alt="Save profile as...<br><br>Use underscores as spaces." value="{form:name}">
+
+			<br style="clear:both;">
+
+			<label>HTML File</label>
+			<select name="template" id="template" name="template" tabindex="1" alt="Select a template HTML file to use">
+				<option value="">Please select</option>
+			</select>		
+
+		</div><!--twoColumns-->
+
+		<div class="twoColumns">
+
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--twoColumns-->
+
+	</form>
+</div><!--worktop-->

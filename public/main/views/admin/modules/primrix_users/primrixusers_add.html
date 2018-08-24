@@ -1,0 +1,78 @@
+<div class="worktop">
+
+<div class="errorBox">
+	{error:username}
+	{error:first_name}
+	{error:last_name}
+	{error:email}
+	{error:password_1}
+	{error:password_2}
+	{error:active}
+</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Primrix Users <span class="fa fa-share"></span> User Manager <span class="fa fa-share"></span> Edit User</h2>
+		</div><!--crumbs-->
+
+		<div class="threeColumns">
+
+			<label>Username</label>
+			<input type="text" id="username" name="username" tabindex="1" value="{form:username}" placeholder="Username" alt="This will be the login name">
+
+			<br style="clear:both;">
+
+			<label>First Name</label>
+			<input type="text" id="first_name" name="first_name" tabindex="1" value="{form:first_name}" placeholder="i.e. John" alt="First name">
+
+			<br style="clear:both;">
+
+			<label>Last Name</label>
+			<input type="text" id="last_name" name="last_name" tabindex="1" value="{form:last_name}" placeholder="i.e. Smith" alt="Surname name">
+
+			<br style="clear:both;">
+
+			<label>Email Address</label>
+			<input type="text" id="email" name="email" tabindex="1" value="{form:email}" placeholder="i.e. john.smith@email.com" alt="Please make sure this is correct as it is used for password resets etc.">
+
+			<br style="clear:both;">
+
+			<label>Password</label>
+			<input type="password" id="password_1" name="password_1" tabindex="1" value="" alt="Password">
+
+			<br style="clear:both;">
+
+			<label>Password (Repeat)</label>
+			<input type="password" id="password_2" name="password_2" tabindex="1" value="" alt="Password as you have typed it above">
+
+		</div><!--threeColumns-->
+		
+		<div class="threeColumns">
+
+			<fieldset>
+				<legend>Active</legend>
+				<input type="radio" id="active" name="active" tabindex="1" value="y" alt="Set as active"{form:active:y}><label for="active" class="freeStyleLabel">Active</label>
+				<input type="radio" id="active" name="active" tabindex="1" value="n" alt="Set as inactive"{form:active:n}><label for="active" class="freeStyleLabel">Inactive</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>User Rights</legend>
+
+				{checkboxRights}
+
+			</fieldset>
+			
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

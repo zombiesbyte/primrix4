@@ -1,0 +1,252 @@
+[
+    {
+        "name": "primrix/securimage",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/primrix/securimage",
+            "reference": "origin/master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "primrix/spectrum",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/primrix/spectrum",
+            "reference": "origin/master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    },
+    {
+        "name": "zurb/foundation",
+        "version": "v5.5.2",
+        "version_normalized": "5.5.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zurb/foundation.git",
+            "reference": "35851ec53c412af5e31b14636f28c248d0272577"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zurb/foundation/zipball/35851ec53c412af5e31b14636f28c248d0272577",
+            "reference": "35851ec53c412af5e31b14636f28c248d0272577",
+            "shasum": ""
+        },
+        "time": "2015-04-30 17:03:48",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "ZURB Inc."
+            }
+        ],
+        "description": "The most advanced responsive front-end framework in the world.",
+        "homepage": "http://foundation.zurb.com",
+        "keywords": [
+            "foundation",
+            "scss"
+        ]
+    },
+    {
+        "name": "fortawesome/font-awesome",
+        "version": "v4.4.0",
+        "version_normalized": "4.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FortAwesome/Font-Awesome.git",
+            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+            "shasum": ""
+        },
+        "require-dev": {
+            "jekyll": "1.0.2",
+            "lessc": "1.4.2"
+        },
+        "time": "2015-07-28 21:55:03",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.0.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "OFL-1.1",
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dave Gandy",
+                "email": "dave@fontawesome.io",
+                "homepage": "http://twitter.com/davegandy",
+                "role": "Developer"
+            }
+        ],
+        "description": "The iconic font and CSS framework",
+        "homepage": "http://fontawesome.io/",
+        "keywords": [
+            "FontAwesome",
+            "awesome",
+            "bootstrap",
+            "font",
+            "icon"
+        ]
+    },
+    {
+        "name": "leafo/scssphp",
+        "version": "v0.0.14",
+        "version_normalized": "0.0.14.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/leafo/scssphp.git",
+            "reference": "dfb793daf3ecdce82c40fb6e6c3a84b6ab230364"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/leafo/scssphp/zipball/dfb793daf3ecdce82c40fb6e6c3a84b6ab230364",
+            "reference": "dfb793daf3ecdce82c40fb6e6c3a84b6ab230364",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "require-dev": {
+            "php": ">=5.3.0",
+            "phpunit/phpunit": "3.7.*"
+        },
+        "time": "2014-08-05 05:45:15",
+        "bin": [
+            "pscss"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "scss.inc.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT",
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Leaf Corcoran",
+                "email": "leafot@gmail.com",
+                "homepage": "http://leafo.net"
+            }
+        ],
+        "description": "scssphp is a compiler for SCSS written in PHP.",
+        "homepage": "http://leafo.net/scssphp/"
+    },
+    {
+        "name": "panique/laravel-sass",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/panique/laravel-sass.git",
+            "reference": "9419bcde4a01ed05eb4e762444d9c56368d49f56"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/panique/laravel-sass/zipball/9419bcde4a01ed05eb4e762444d9c56368d49f56",
+            "reference": "9419bcde4a01ed05eb4e762444d9c56368d49f56",
+            "shasum": ""
+        },
+        "require": {
+            "leafo/scssphp": "v0.0.14",
+            "php": ">=5.3.0"
+        },
+        "time": "2015-05-23 21:13:23",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "sass-compiler.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Panique",
+                "homepage": "http://careers.stackoverflow.com/panique",
+                "role": "Developer"
+            }
+        ],
+        "description": "Compiles your Sass .scss files to .css every time you run your app (in development)",
+        "homepage": "https://github.com/panique/laravel-sass",
+        "keywords": [
+            "css",
+            "sass",
+            "scss"
+        ]
+    },
+    {
+        "name": "tinymce/tinymce",
+        "version": "4.2.5",
+        "version_normalized": "4.2.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tinymce/tinymce-dist.git",
+            "reference": "9bdc89da4f72a5f11a3cc6bb1373e1a898876628"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/9bdc89da4f72a5f11a3cc6bb1373e1a898876628",
+            "reference": "9bdc89da4f72a5f11a3cc6bb1373e1a898876628",
+            "shasum": ""
+        },
+        "time": "2015-08-31 07:48:30",
+        "type": "component",
+        "extra": {
+            "component": {
+                "scripts": [
+                    "tinymce.js",
+                    "plugins/*/plugin.js",
+                    "themes/*/theme.js"
+                ],
+                "files": [
+                    "tinymce.min.js",
+                    "plugins/*/plugin.min.js",
+                    "themes/*/theme.min.js",
+                    "skins/**"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1"
+        ],
+        "description": "Web based JavaScript HTML WYSIWYG editor control.",
+        "homepage": "http://www.tinymce.com",
+        "keywords": [
+            "editor",
+            "html",
+            "javascript",
+            "richtext",
+            "tinymce",
+            "wysiwyg"
+        ]
+    }
+]

@@ -1,0 +1,38 @@
+@import 'config/_config.scss';
+
+// Edit the following at your own risk
+
+$pHeadsFont: 'Roboto', sans-serif; //The headings font family i.e. h1, h2, h3, etc
+$pParasFont: 'Roboto', sans-serif; //The paragraphs font family i.e. p, ul, small, etc 
+
+$pBgColour1RGB1: 	rgba($pBgColour1, 1);
+$pBgColour1RGB0: 	rgba($pBgColour1, 0);
+$pBgColour1RGB095: 	rgba($pBgColour1, 0.95);
+$pBGColour1AHEX: 	ie-hex-str(rgba($pBgColour1, 0.95));
+
+$pBgColour3RGB050: 	rgba($pBgColour3, 0.5);
+
+$pBgColour1Alt: 	darken($pBgColour1, 5%);
+
+$pBgColour2RGB1: 	rgba($pBgColour2, 1);
+$pBgColour2RGB0: 	rgba($pBgColour2, 0);
+
+$pBgColour2Alt: 	darken($pBgColour2, 5%);
+
+$pFgColour1RGB1: 	rgba($pFgColour1, 1);
+$pFgColour1RGB0: 	rgba($pFgColour1, 0);
+
+$pFgColour2RGB1: 	rgba($pFgColour2, 1);
+$pFgColour2RGB0: 	rgba($pFgColour2, 0);
+
+$pToolTipBgRGB095: 	rgba($pToolTipBg, 0.95);
+$pToolTipBgAHEX: 	ie-hex-str(rgba($pToolTipBg, 0.95));
+
+$pFtColour1Alt: 	darken($pFtColour1, 5%);
+
+//forms
+$pFormBtnDn: 		darken($pFormBtnUp, 5%);
+$pFormBgColour:		#FFFFFF;
+$pFormTextColour:	$pBgColour1;
+$disabledForm:		darken($pBgColour1, 1%);
+

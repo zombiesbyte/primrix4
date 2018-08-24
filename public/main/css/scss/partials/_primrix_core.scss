@@ -1,0 +1,143 @@
+/*Core Styles*/
+html {
+	width: 100%;
+	//min-width: 1440px;
+	height: 100%;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	float: left;
+	clear: both;
+}
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	background-color: $pBgColour1;
+	text-align: center;
+	font-family: $pParasFont;
+	font-size: 12px;
+	color: $pFgColour2;
+	float: left;
+	clear: both;
+}
+h1 {
+
+}
+h2 {
+	font-family: $pHeadsFont;
+	font-size: 16px;
+	color: $pFgColour1;
+	text-align: left;
+	padding: 0 0 30px 0;
+	margin: 0 0 0 0;
+	font-weight: normal;
+}
+h2 .fa {
+	color: $pFgColour2;
+	margin: 0 10px 0 10px;
+}
+h2 .std {
+	color: $pFgColour1;
+	margin: 0 10px 0 10px;
+}
+a,
+a:link,
+a:visited {
+	text-decoration: none;
+	color: $pFtColour2;
+}
+a:hover {
+	text-decoration: none;	
+	color: $pFgColour1;
+	cursor: pointer !important;
+}
+a:active {
+	text-decoration: none;
+	color: $pFgColour1;
+	cursor: pointer !important;
+}
+.tableCaption {
+	background-color: $pBgColour2;
+	width: 96%;
+	padding: 5px 2%;
+	float: left;
+	text-align: left;
+	border-radius: 8px;
+	margin: 0 0 3px 0;
+}
+table {
+	float: left;
+	clear: both;
+	width: 100%;
+	border: 0 solid $pBgColour1;
+	border-radius: 8px;
+	margin: -3px 0 20px 0;
+}
+table tr th {
+	background-color: $pFgColour1;
+	color: $pFgColour2;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 8px;
+	border-radius: 8px;
+}
+table tr th a,
+table tr th a:link,
+table tr th a:visited {
+	text-decoration: none;
+	color: $pFtColour2;
+}
+table tr th a:hover {
+	text-decoration: none;
+	color: $pBgColour2;
+	cursor: pointer !important;
+}
+table tr th a:active {
+	text-decoration: none;
+	color: $pBgColour3;
+	cursor: pointer !important;
+}
+table tr td {
+	background-color: $pBgColour2;
+	color: $pFtColour2;
+	padding: 8px;	
+	border-radius: 8px;
+}
+table tr:hover td {
+	background-color: $tableRow_h;
+}
+table tr .small {
+	width: 40px;
+}
+table tr .txtLeft {
+	text-align: left;
+}
+table tr .blend2BG {
+	background-color: $pBgColour1;
+}
+table tr:hover .blend2BG {
+	background-color: $pBgColour1;
+}
+table tr .primary {
+	background-color: $pBgColour3;
+	color: $pFtColour1;
+}
+table tr .fa {
+	font-size: 20px;
+}
+table tr [class^="primrix-"] {
+	font-size: 20px !important;
+}
+.btnRemove {
+	background-image: fa fa-trash-o;
+}
+.sm {
+	font-size: 13px !important; 
+	color: $pFtColour2 ;
+	padding: 0 0 0 5px;
+	font-weight: normal;
+}
+.hide {
+	display: none;
+}

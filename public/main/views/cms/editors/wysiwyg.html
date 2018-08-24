@@ -1,0 +1,54 @@
+<div class="worktop">
+
+<script type="text/javascript" src="/vendor/tinymce/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+	selector: "textarea.editme",
+	menubar : false,
+	statusbar : true,
+	resize : "both",
+	image_advtab: true,
+	fontsize_formats: "8px 10px 11px 12px 14px 16px 18px 20px 22px 24px 28px 30px",
+	plugins: [
+		"textcolor table advlist lists link image charmap emoticons media insertdatetime code searchreplace paste nonbreaking wordcount",
+		"colorpicker autolink hr spellchecker pagebreak fullscreen anchor autoresize"
+	],
+	theme_advanced_resizing : true,
+
+	toolbar1: "undo redo | formatselect fontsizeselect | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
+	toolbar2: "cut copy paste pastetext | searchreplace | insertdatetime | table | charmap emoticons nonbreaking hr pagebreak | subscript superscript | blockquote | removeformat | link unlink anchor image media | spellchecker | code fullscreen"
+});
+</script>
+
+<div class="errorBox">
+	{error:field}
+</div>
+
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2>
+				<span class="fa fa-folder-open"></span>{from} 
+				<span class="fa fa-share"></span> " {friendlyFieldName} " 
+				<span class="fa fa-share"></span> WYSIWYG Editor 
+				{editVariable}
+			</h2>
+		</div><!--crumbs-->
+
+		<div class="fieldNotes"><span class="fa fa-info-circle"></span>{fieldNotes}</div>
+
+		<div class="wysiwyg">
+			<textarea name="field" id="field" tabindex="1" class="editme" style="width:100%; height:550px" rows="20" cols="20">{form:field}</textarea>
+		</div>
+
+		<div class="submitRow">
+			<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+			</button>
+			<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+				<span class="fa fa-floppy-o"></span> Save
+			</button>
+		</div><!--submitRow-->
+
+	</form>
+</div><!--worktop-->

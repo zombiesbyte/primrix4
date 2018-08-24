@@ -1,0 +1,58 @@
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:type}
+		{error:name}
+		{error:description}
+	</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Site Options <span class="fa fa-share"></span> Backup &amp; Restore <span class="fa fa-share"></span> New Restore Point</h2>
+		</div><!--crumbs-->
+
+		<div class="threeColumns">
+
+			<label>Backup Type</label>
+			<select id="type" name="type" tabindex="1">
+				<option value=""{form:type:}>Please select</option>
+				<option value="database"{form:type:database}>Database Only</option>
+				<option value="files"{form:type:files}>Files Only</option>
+				<option value="both"{form:type:both}>Both Database &amp; Files</option>
+			</select>
+
+			<br style="clear:both;">
+
+			<label>Backup Name</label>
+			<input type="text" id="name" name="name" tabindex="1" value="{form:name}" placeholder="Name your backup" alt="Use this as a reference to your backup">
+
+			<br style="clear:both;">
+
+			<label>Backup Description</label>
+			<textarea id="description" name="description" tabindex="1">{form:description}</textarea>
+
+		</div><!--threeColumns-->
+
+		<div class="threeColumns">
+
+			<fieldset>
+				<legend>User Rights</legend>
+
+				{checkboxRights}
+
+			</fieldset>
+
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

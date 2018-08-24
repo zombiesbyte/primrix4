@@ -1,0 +1,92 @@
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:notes}
+		{error:name}
+		{error:meta_ref}
+		{error:meta_code}
+		{error:default}
+		{error:editor}
+		{error:options}
+		{error:active}
+	</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Content Centre <span class="fa fa-share"></span> Meta Manager <span class="fa fa-share"></span> Edit Meta Record</h2>
+		</div><!--crumbs-->
+
+		<div class="threeColumns">
+
+			<label>Meta Description</label>
+			<textarea id="notes" name="notes" tabindex="1" placeholder="Description of what this meta tag does" alt="A brief description of what this meta tag does">{form:notes}</textarea>
+
+			<br style="clear:both;">
+
+			<label>Editor</label>
+			<select id="editor" name="editor" tabindex="1" alt="Please select the type of editor the user will need to edit this value">
+				<option value=''{form:editor:}>Please select a field type</option>
+				<option value='textbox'{form:editor:textbox}>TextBox</option>
+				<option value='selectbox'{form:editor:selectbox}>SelectBox</option>
+				<option value='checkbox'{form:editor:checkbox}>CheckBox</option>			
+			</select>
+			
+			<br style="clear:both;">
+
+			<label>Editor Options</label>
+			<textarea id="options" name="options" tabindex="1" placeholder="If the editor type requires options then please enter them here." alt="Each option should be entered on a new line and should not contain any trailing whitespaces">{form:options}</textarea>
+			
+
+		</div><!--threeColumns-->
+
+		<div class="threeColumns">
+
+			<label>Meta Name</label>
+			<input type="text" id="name" name="name" tabindex="1" value="{form:name}" placeholder="Name of Meta record" alt="The name of the meta record">
+
+			<br style="clear:both;">
+
+			<label>Meta Ref</label>
+			<input type="text" id="meta_ref" name="meta_ref" tabindex="1" value="{form:meta_ref}" placeholder="i.e. pageTitle" alt="The reference is used to inject the variable into the code">
+
+			<br style="clear:both;">
+
+			<label>Meta Code</label>
+			<textarea id="meta_code" name="meta_code" tabindex="1" placeholder="The code together with the variable above included" alt="i.e. &amp;lt;title&amp;gt;{pageTitle}&amp;lt;/title&amp;gt;">{form:meta_code}</textarea>
+
+			<br style="clear:both;">
+
+			<label>Meta Default</label>
+			<input type="text" id="default" name="default" tabindex="1" value="{form:default}" placeholder="Default value" alt="The default or common value.<br><br>This will be auto-populated and it is recommened to use a fall-back value.">
+
+		</div><!--threeColumns-->
+		
+		<div class="threeColumns">
+
+			<fieldset>
+				<legend>Active</legend>
+				<input type="radio" id="active" name="active" tabindex="1" value="y" alt="Set as active"{form:active:y}><label for="active" class="freeStyleLabel">Active</label>
+				<input type="radio" id="active" name="active" tabindex="1" value="n" alt="Set as inactive"{form:active:n}><label for="active" class="freeStyleLabel">Inactive</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>User Rights</legend>
+
+				{checkboxRights}
+
+			</fieldset>
+			
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

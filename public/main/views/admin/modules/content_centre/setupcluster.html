@@ -1,0 +1,38 @@
+<div class="worktop">
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2>
+				<span class="fa fa-folder-open"></span>Content Centre 
+				<span class="fa fa-share"></span> Page Content 
+				<span class="fa fa-share"></span> {clusterName} 
+				<span class="fa fa-share"></span> Edit Cluster Groups
+				{editCluster}
+			</h2>
+		</div><!--crumbs-->
+
+		{tables}
+
+		<div class="submitRow">
+			{editHTMLButton}
+			{extendClusterButton}
+			<button type="submit" id="delete" name="delete" alt="Remove selected" tabindex="1">
+				<span class="fa fa-trash-o"></span> Remove
+			</button>
+			<button type="submit" id="addVariable" name="addVariable" alt="Add Variable to Cluster" tabindex="1">
+				<span class="fa fa-plus-square-o"></span> Add Variable
+			</button>
+			<button type="submit" id="cancel" name="cancel" alt="Return" tabindex="1">
+				<span class="fa fa-reply"></span> Return
+			</button>
+		</div><!--submitRow-->
+
+	</form>
+</div><!--worktop-->
+
+<script type="text/javascript">
+	$('.deleteLink').click(function(event){
+		confirmNotice(event, '.deleteLink');
+	});
+</script>

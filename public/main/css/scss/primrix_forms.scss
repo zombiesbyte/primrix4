@@ -1,0 +1,180 @@
+@import 'config/_config.scss';
+@import 'partials/_prepare.scss';
+
+/*Form Styles*/
+form {
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+label {
+  	color: white;
+  	font-family: "Roboto", sans-serif;
+  	font-size: 12px;
+  	float: left;
+  	height: 28px;
+  	width: 100px;
+  	padding: 16px 16px 16px 0;
+  	text-align: left;
+}
+.freeStyleLabel {
+  	color: white;
+  	font-family: "Roboto", sans-serif;
+  	font-size: 12px;
+  	float: left;
+  	height: auto;
+  	width: auto;
+  	padding: 0 16px 0 0;
+ 	text-align: left;	
+}
+.labelError {
+	color: red;
+}
+.grp {
+	float: left;
+	width: auto;
+	height: auto;
+}
+.checkboxGrp {
+	float: left;
+	width: auto;
+	height: auto;
+	border-radius: 8px;
+	background-color: $pBgColour3;
+	padding: 10px;
+	margin: 0 10px 10px 10px;
+}
+.checkboxGrp label {
+	color: white;
+  	font-family: "Roboto", sans-serif;
+  	font-size: 12px;
+  	float: left;
+  	height: auto;
+  	width: 100px;
+  	padding: 0 16px 0 16px;
+  	text-align: left;
+}
+.fieldLink {
+	padding: 0 0 0 116px;
+	margin-top: -10px;
+	float: left;
+}
+.wysiwyg {
+	float: left;
+	clear: both;
+	width: 96%;
+	height: auto;
+	padding: 2% 2% 2% 2%;
+	background-color: $pBgColour2;
+	margin-bottom: 2%;
+	border-radius: 8px;
+}
+fieldset {
+	color: $pBgColour3;
+	border: 1px solid $pBgColour3;
+	margin: 0 0 20px 0;
+	padding: 16px 16px;
+	border-radius: 8px;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="color"] {
+	width: 200px;
+	height: 60px;
+	float: left;
+	padding: 0px 16px;
+	margin: 0 0 20px 0;
+	background-color: $pFormBgColour;
+	border: none 0 $pFormBgColour;
+	border-radius: 8px;
+	color: $pBgColour1;
+	font-family: $pParasFont;
+	font-size: 16px;
+	font-weight: bold;
+}
+input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"]:disabled, input[type="color"]:disabled {
+	background-color: $disabledForm;
+}
+.iconPreview input[type="text"] {
+	width: 160px;
+	margin: 0 0 0 0;
+	padding: 0px 0px;
+	float: left;
+}
+textarea {
+	width: 200px;
+	height: 160px;
+	float: left;
+	padding: 8px 16px;
+	margin: 0 0 20px 0;
+	background-color: $pFormBgColour;
+	border: none 0 $pFormBgColour;
+	border-radius: 8px;
+	color: $pBgColour1;
+	font-family: $pParasFont;
+	font-size: 16px;
+	font-weight: bold;
+	resize: both;
+    overflow: auto;
+}
+textarea:disabled {
+	background-color: $disabledForm;
+	resize: none;
+}
+.editme {
+	height: auto;
+	resize: both;
+    overflow: auto;
+}
+select {
+  width: 232px;
+  height: 60px;
+  float: left;
+  padding: 0 16px;
+  margin: 0 0 20px 0;
+  background-color: white;
+  border: none 0px white;
+  border-radius: 8px;
+  color: #464745;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+select:disabled {
+	background-color: $disabledForm;
+}
+input[type="checkbox"] {
+	width: auto;
+	height: auto;
+	margin: 0 15px 9px 0;
+	padding: 0 0 0 0;
+	float: left;
+}
+input[type="radio"] {
+	width: auto;
+	height: auto;
+	margin: 0 15px 9px 0;
+	padding: 0 0 0 0;
+	float: left;
+}
+table input[type="checkbox"] {
+	width: auto;
+	height: auto;
+	margin: 5px auto 0 auto;
+	padding: 0 0 0 0;
+	float: none;
+}
+input[type="submit"], input[type="button"], button[type="submit"] {
+	font-family: $pParasFont;
+	font-size: 16px;
+	color: $pFormBgColour;
+	padding: 18px 44px;
+	margin: 0 0 16px 0;
+	background-color: $pFormBtnUp;
+	border: none 0 $pFormBtnUp;
+	border-radius: 8px;
+}
+input[type="submit"]:hover, input[type="button"]:hover, button[type="submit"]:hover {
+	background-color: $pFormBtnDn;
+	border: none 0 $pFormBtnDn;
+	cursor: pointer;
+}

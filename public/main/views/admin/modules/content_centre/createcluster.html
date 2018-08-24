@@ -1,0 +1,62 @@
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:cluster_desc}
+		{error:cluster_ref}
+		{error:duplication_allowed}
+	</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2>
+				<span class="fa fa-folder-open"></span>Content Centre 
+				<span class="fa fa-share"></span> Page Content 
+				<span class="fa fa-share"></span> {pageUri} 
+				<span class="fa fa-share"></span> Edit a Cluster Group
+			</h2>
+		</div><!--crumbs-->
+
+		<div class="threeColumns">
+
+			<label>Cluster Description</label>
+			<textarea id="cluster_desc" name="cluster_desc" tabindex="1" placeholder="A brief description of what the cluster group controls">{form:cluster_desc}</textarea>
+
+			<br style="clear:both;">
+
+			<label>Cluster Reference</label>
+			<input type="text" id="cluster_ref" name="cluster_ref" tabindex="1" placeholder="Give the cluster content a reference" alt="i.e. topSection" value="{form:cluster_ref}">
+
+		</div><!--threeColumns-->
+
+		<div class="threeColumns">
+
+			<fieldset>
+				<legend>Options</legend>
+
+				<input type="checkbox" id="duplication_allowed" name="duplication_allowed" value="y"{form:duplication_allowed:y}><label for="duplication_allowed" class="freeStyleLabel">Allow Multiples?</label>
+
+				<input type="checkbox" id="use_html_block" name="use_html_block" value="y"{form:use_html_block:y}><label for="use_html_block" class="freeStyleLabel">Use HTML Block?</label>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>User Rights</legend>
+
+				{checkboxRights}
+
+			</fieldset>
+			
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

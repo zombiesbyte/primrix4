@@ -1,0 +1,117 @@
+
+<script src="/main/scripts/fileviewer.js"></script>
+<script type="text/javascript">
+	$fVFolderChangeSubmit = false;
+	$fVDynamicTargetID = true;
+	$allowCtrl = false;
+	//need to select target for selected file
+</script>
+
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:social_media_name}
+		{error:social_media_ref}
+		{error:social_media_image}
+		{error:social_media_link}
+		{error:active}
+	</div>
+
+	<form method="post" action="">
+		
+		<div id="fileViewDialogue">
+			<!--we use this as a js dumping ground for our array of selected files-->
+			<input type="hidden" id="selectedFiles" name="selectedFiles" value="{form:selectedFiles}">
+			<div id="fileView">				
+				<div class="controls">
+					<div class="ctrlGrp" id="folderToolBox">
+						<p>Folders <small><em>/site/files</em></small></p>
+						<div class="lid" style="display:none;"><span class="fa fa-folder-open-o"></span></div>
+						<div class="toolbox" style="display:block;">
+							<select id="folder" name="folder" tabindex="1">
+								{folderSelectList}
+							</select>
+						</div><!--tools-->
+					</div><!--ctrlGrp-->
+					<div class="buttonPadding">
+						<button type="submit" id="closeFileViewer" name="closeFileViewer" alt="Close" tabindex="1">
+							<span class="fa fa-close"></span> Close
+						</button>
+					</div>
+				</div><!--controls-->
+				<div id="fileViewFolder">
+					<div class="fileViewStatus">
+					  <div><p id="fileViewCtrlActive" alt="This icon illustrates when Ctrl/Control button is pressed which allows multiple file selections.<br><br>Please note that some functions are not available when multiple files are selected."><span class='fa fa-files-o'></span></p></div>
+					  <p id="fileViewStatusTotal"></p>
+					  <p id="fileViewStatusSelected">Selected: 0 file(s)</p>
+					  <p id="totalFolderSize"></p>
+					 </div>
+					<br style="clear:both;">					
+				</div><!--fileViewFolder-->
+			</div><!--#fileview-->
+			<br style="clear:both;">
+		</div><!--fileViewDialogue-->
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Social Media <span class="fa fa-share"></span> Social Badges <span class="fa fa-share"></span> Edit Badge</h2>
+		</div><!--crumbs-->
+
+		<div class="threeColumns">
+
+			<label>Network Name</label>
+			<input type="text" id="social_media_name" name="social_media_name" tabindex="1" value="{form:social_media_name}" placeholder="Social network name" alt="The name of the network">
+
+			<br style="clear:both;">
+
+			<label>Network Ref</label>
+			<input type="text" id="social_media_ref" name="social_media_ref" tabindex="1" value="{form:social_media_ref}" placeholder="i.e. facebook" alt="Used to reference the network">
+
+			<br style="clear:both;">
+
+			<label>Network Icon</label>
+			<input type="text" class="fileViewerEvent" id="social_media_image" name="social_media_image" tabindex="1" value="{form:social_media_image}" placeholder="Click to select an image" alt="Click to open the file viewer to select an image">
+
+			<br style="clear:both;">
+
+			<label>Network Link</label>
+			<input type="text" id="social_media_link" name="social_media_link" tabindex="1" value="{form:social_media_link}" placeholder="http://facebook.com/you" alt="Link to your social media network account">
+
+		</div><!--threeColumns-->
+		
+		<div class="threeColumns">
+
+			<fieldset>
+				<legend>Active</legend>
+				<input type="radio" id="active" name="active" tabindex="1" value="y" alt="Set as active"{form:active:y}><label for="active" class="freeStyleLabel">Active</label>
+				<input type="radio" id="active" name="active" tabindex="1" value="n" alt="Set as inactive"{form:active:n}><label for="active" class="freeStyleLabel">Inactive</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>User Rights</legend>
+
+				{checkboxRights}
+
+			</fieldset>
+			
+			<fieldset>
+				<legend>Options</legend>
+
+				<div class="grp">
+					<input type="checkbox" id="opens_new" name="opens_new" tabindex="1" value="y" alt="Open this link in a new tab?"{form:opens_new:y}>
+					<label for="rights" class="freeStyleLabel"><span style="color:#FFFFFF">Link open in a new tab?</span></label>
+				</div>
+			</fieldset>
+
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

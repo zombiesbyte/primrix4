@@ -1,0 +1,136 @@
+@import 'config/_config.scss';
+@import 'partials/_prepare.scss';
+@import 'partials/_primrix_core.scss';
+@import 'partials/_primrix_sundry.scss';
+
+/*Login Styles*/
+.lines {
+	width: 100%;
+	height: 21px;
+	margin-top: 248px;
+	position: absolute;
+	z-index: 1;
+}
+.line1 {
+	width: 100%;
+	height: 9px;
+	margin-bottom: 3px;
+	background-color: $pFgColour1;
+}
+.line2 {
+	width: 100%;
+	height: 9px;
+	background-color: $pFgColour2;
+}
+.loginContainer {
+	width: 518px;
+	height: 488px;
+	padding: 0;
+	margin: 0 auto 0 auto;
+	position: relative;
+	z-index: 1;
+}
+.loginBox {
+	width: 380px;
+	height: 350px;
+	padding: 69px;
+	margin: 0 auto 0 auto;
+	position: relative;
+	z-index: 2;
+}
+.logoGrp {
+	width: 380px;
+	height: 141px;
+}
+.loginFields {
+	width: 191px;
+	margin-right: 20px;
+	float: left;
+}
+.captcha {
+	width: 380px;
+	height: 60px;
+	float: left;
+	background-color: #FFFFFF;
+	border-radius: 8px;
+	margin: 0 0 20px 0;
+}
+.captchaCtrls {
+	width: 18px;
+	height: 60px;
+	margin: 0 12px 0 0;
+	float: left;
+	color: $pBgColour2;
+}
+.captchaCtrls a,
+.captchaCtrls a:link,
+.captchaCtrls a:visited {
+	text-decoration: none;
+	color: $pBgColour2;
+}
+.captchaCtrls a:hover {
+	text-decoration: none;	
+	color: $pFgColour1;
+	cursor: pointer !important;
+}
+.captchaCtrls a:active {
+	text-decoration: none;
+	color: $pFgColour1;
+	cursor: pointer !important;
+}
+.captchaCtrls .play {
+	width: 18px;
+	height: 22px;
+	margin-top: 8px;
+	font-size: 15px;
+	color: $pBgColour2;
+}
+.captchaCtrls .reload {
+	width: 18px;
+	height: 22px;
+	margin-top: 3px;
+	font-size: 15px;
+	color: $pBgColour2;
+}
+.captchaImage {
+	width: 140px;
+	height: 40px;
+	margin: 10px 0 0 0;
+	float: left;
+}
+.submitGrp {
+	width: 380px;
+	height: 60px;
+	float: left;
+}
+.submitGrp .options {
+	width: 143px;
+	height: 60px;
+	padding-top: 11px;
+	float: left;
+	text-align: left;
+}
+.submitGrp .pLogo {
+	width: 71px;
+	height: 42px;
+	padding-top: 9px;
+	float: left;
+	font-size: 40px;
+	color: $pBgColour2;
+}
+.submitGrp .submitBtn {
+	width: auto;
+	height: auto;
+	float: right;
+}
+
+/*Footers*/
+.footerLegal {
+	height: auto;
+	width: auto;
+	float: right;
+	clear: both;
+	text-align: right;
+	color: $pBgColour2;
+	margin-top: 36px;
+}

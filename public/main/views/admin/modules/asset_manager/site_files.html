@@ -1,0 +1,187 @@
+<script src="/main/scripts/fileviewer.js"></script>
+
+<div class="worktop">
+
+	<div class="errorBox">
+		{error:file}
+		{error:newFolderName}
+		{error:fileAction}
+		{error:resizeWidth}
+		{error:resizeHeight}
+	</div>
+
+	<form method="post" action="" id="form1" enctype="multipart/form-data">
+
+		<!--we use this as a js dumping ground for our array of selected files-->
+		<input type="hidden" id="selectedFiles" name="selectedFiles" value="">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Asset Manager <span class="fa fa-share"></span> Site Files</h2>
+		</div><!--crumbs-->
+
+		<div id="fileView">
+			
+			<div class="controls">
+
+				<div class="ctrlGrp" id="folderToolBox">
+					<p>Folders <small><em>/site/files</em></small></p>
+					<div class="lid" style="display:none;"><span class="fa fa-folder-open-o"></span></div>
+					<div class="toolbox" style="display:block;">
+						<select id="folder" name="folder" tabindex="1">
+							{folderSelectList}
+						</select>
+						<button type="submit" id="createFolder" name="createFolder" alt="Create a new folder here" tabindex="1">
+							<span class="fa fa-plus"></span>
+						</button>
+						<input type="hidden" id="newFolderName" name="newFolderName">
+						<button type="submit" id="deleteFolder" name="deleteFolder" alt="Delete this folder (Warning: all files within will be deleted)" tabindex="1">
+							<span class="fa fa-times"></span>
+						</button>
+					</div><!--tools-->
+				</div><!--ctrlGrp-->
+
+				<div class="ctrlGrp" id="viewToolBox">
+					<p>View</p>
+					<div class="lid"><span class="fa fa-eye"></span></div>
+					<div class="toolbox">
+						<input type="text" id="search" tabindex="1" alt="search filenames within this folder">
+						
+						<div class="breaker"></div>
+
+						<button type="submit" id="viewFile" name="viewFile" alt="View selected file" tabindex="1">
+							<span class="fa fa-eye"></span>
+						</button>
+						<button type="submit" id="refresh" name="refresh" alt="Refresh list" tabindex="1">
+							<span class="fa fa-refresh"></span>
+						</button>
+
+						<div class="breaker"></div>
+
+						<button type="submit" id="viewSmall" name="viewSmall" alt="View as <u>small</u> icons" tabindex="1">
+							<span class="fa fa-image" style="font-size: 9px;"></span>
+						</button>
+						<button type="submit" id="viewMedium" name="viewMedium" alt="View as <u>medium</u> icons" tabindex="1">
+							<span class="fa fa-image" style="font-size: 14px;"></span>
+						</button>
+						<button type="submit" id="viewLarge" name="viewLarge" alt="View as <u>large</u> icons" tabindex="1">
+							<span class="fa fa-image" style="font-size: 20px;"></span>
+						</button>
+
+					</div><!--tools-->
+				</div><!--ctrlGrp-->
+
+				<div class="ctrlGrp" id="resizeToolBox">
+					<p>Image Resize</p>
+					<div class="lid"><span class="fa fa-expand"></span></div>
+					<div class="toolbox">
+						<input type="text" id="resizeWidth" name="resizeWidth" tabindex="1" alt="New width (in pixels)">
+						<input type="text" id="resizeHeight" name="resizeHeight" tabindex="1" alt="or New height (in pixels)">
+						<button type="submit" id="resizeImage" name="resizeImage" alt="Resize using the newly provided width or height" tabindex="1">
+							<span class="fa fa-expand"></span>
+						</button>
+					</div><!--tools-->
+				</div><!--ctrlGrp-->
+
+				<div class="ctrlGrp" id="fileModToolBox">
+					<p>File Modifications</p>
+					<div class="lid"><span class="fa fa-file-o"></span></div>
+					<div class="toolbox">
+						<input type="text" id="fileAction" name="fileAction" tabindex="1" alt="Shows the selected filename">
+						
+						<button type="submit" id="rename" name="rename" alt="Rename: Change the filename and click here to rename the file.<br><br>Please note: the original file extension will be maintained" tabindex="1">
+							<span class="fa fa-adn"></span>
+						</button>
+						
+						<button type="submit" id="copy" name="copy" alt="Copy: Change the filename and click here to make a copy of the file" tabindex="1">
+							<span class="fa fa-copy"></span>
+						</button>
+
+						<button type="submit" id="rotateImage" name="rotateImage" alt="Rotate the selected file by 90 degrees clockwise" tabindex="1">
+							<span class="fa fa-rotate-right"></span>
+						</button>
+
+					</div><!--tools-->
+				</div><!--ctrlGrp-->
+
+				<!--future implemtation-->
+				<!--
+				<div class="ctrlGrp" id="imageCtrlToolBox">
+					<p>Image Control</p>
+					<div class="lid"><span class="fa fa-file-picture-o"></span></div>
+					<div class="toolbox">
+						<!--future implemtation-->
+						<!-- we may need to place these into a new toolbox as they are image specific!
+						<button type="submit" id="crop" name="crop" alt="Launch the crop tool" tabindex="1">
+							<span class="fa fa-crop"></span>
+						</button> 
+
+						<button type="submit" id="thumbnail" name="thumbnail" alt="Launch the thumbnail tool" tabindex="1">
+							<span class="fa fa-file-picture-o"></span>
+						</button>
+						-->
+
+					<!--</div><!--tools-->
+				<!--</div><!--ctrlGrp-->
+
+
+				<div class="ctrlGrp" id="moveToolBox">
+					<p>Move</p>
+					<div class="lid"><span class="fa fa-crosshairs"></span></div>
+					<div class="toolbox">
+						<select id="moveTo" name="moveTo" tabindex="1">
+							{folderSelectListExcludingCurrent}
+						</select>
+						<button type="submit" id="move" name="move" alt="Move the selected file(s) to a different folder" tabindex="1">
+							<span class="fa fa-crosshairs"></span>
+						</button>
+					</div><!--tools-->
+				</div><!--ctrlGrp-->
+
+				<div class="ctrlGrp" id="deleteToolBox">
+					<p>Delete</p>
+					<div class="lid"><span class="fa fa-trash-o"></span></div>
+					<div class="toolbox">
+						<button type="submit" id="delete" name="delete" alt="Delete the selected file" tabindex="1">
+							<span class="fa fa-trash-o"></span>
+						</button>
+						
+						<!--future implemtation-->
+						<!--
+						<div class="breaker"></div>
+
+						<button type="submit" id="restoreThumb" name="restoreThumb" alt="Restore the default thumbnail" tabindex="1">
+							<span class="fa fa-image"></span>
+						</button>
+						-->
+
+					</div><!--tools-->
+				</div><!--ctrlGrp-->
+
+			</div><!--controls-->
+
+			<div id="fileViewFolder">
+
+				<div class="fileViewStatus">
+				  <div><p id="fileViewCtrlActive" alt="This icon illustrates when Ctrl/Control button is pressed which allows multiple file selections.<br><br>Please note that some functions are not available when multiple files are selected."><span class='fa fa-files-o'></span></p></div>
+				  <p id="fileViewStatusTotal"></p>
+				  <p id="fileViewStatusSelected">Selected: 0 file(s)</p>
+				  <p id="totalFolderSize"></p>
+				 </div>
+				<br style="clear:both;">
+				
+				
+			</div><!--fileViewFolder-->
+
+
+		</div><!--#fileview-->
+
+		<br style="clear:both;">
+
+		<div class="submitRow">
+			<input type="file" id="file" name="file" tabindex="1" alt="Please select a file to upload">
+			<button type="submit" id="upload" name="upload" alt="Upload Selected" tabindex="1">
+				<span class="fa fa-upload"></span> Upload
+			</button>
+		</div><!--submitRow-->
+	</form>
+</div><!--worktop-->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" ><![endif]-->
+<html class="no-js" lang="en" >
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			label {
+				color: blue;
+			}
+			.labelError {
+				color: red;
+			}
+		</style>
+
+
+		<title>Test</title>
+	</head>
+	<body>
+
+		<form method="post" action="" accept-charset="UTF-8">
+
+			<!--<input name="_token" type="hidden" value="RaOPV4Q4VByf5iTSsx4QgkmTxrMCLNy2s4KJiL21">-->
+
+			<label for="name" class="{label:name}">Your Name:</label>
+			<input type="text" id="name" name="name" tabindex="1" class="input270" placeholder="Name:" value="{form:name}">{error:name}<br style="clear:both;">
+
+			<label for="email" class="{label:email}">Email:</label>
+			<input type="email" id="email" name="email" tabindex="1" class="input270" placeholder="Email Address:" value="{form:email}">{error:email}<br style="clear:both;">
+
+			<label for="postcode" class="{label:postcode}">Post Code:</label>
+			<input type="text" id="postCode" name="postcode" tabindex="1" class="input270" placeholder="Post Code:" value="{form:postcode}">{error:postcode}<br style="clear:both;">
+
+			<label for="tel_no" class="{label:tel_no}">Telephone:</label>
+			<input type="text" id="telNo" name="tel_no" tabindex="1" class="input270" placeholder="Tel Number:" value="{form:tel_no}">{error:tel_no}<br style="clear:both;">
+
+			<input type="submit" name="submit" value="SEND">
+
+			
+
+		</form>
+	</body>
+</html>

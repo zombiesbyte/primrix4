@@ -1,0 +1,45 @@
+<div class="worktop">
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2>
+				<span class="fa fa-folder-open"></span>Content Centre 
+				<span class="fa fa-share"></span> Page Content 
+				<span class="fa fa-share"></span> {pageName} 
+				<span class="fa fa-share"></span> Page Meta
+			</h2>
+		</div><!--crumbs-->
+
+		<table id="menumanager">
+			<thead>
+				<tr>
+					
+					<th class="txtLeft">Tag</th>
+					<th class="txtLeft">Value</th>
+					<th class="small"><span class="fa fa-check-square-o"></span></th>
+					<th class="small"><span class="fa fa-users"></span></th>
+					<th class="small"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{table_rows}
+
+			</tbody>
+
+		</table>
+			
+
+		<div class="submitRow">
+			<button type="submit" id="edit" name="edit" alt="Edit Meta Profile" tabindex="1">
+				<span class="fa fa-trash-o"></span> Edit
+			</button>
+			<button type="submit" id="cancel" name="cancel" alt="Return" tabindex="1">
+				<span class="fa fa-reply"></span> Return
+			</button>
+		</div><!--submitRow-->
+
+	</form>
+</div><!--worktop-->

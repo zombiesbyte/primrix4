@@ -1,0 +1,70 @@
+{
+	"name": "jamesdalgarno/primrix4",
+	"description": "Primrix version 4 PHP Framework 2014",
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "primrix/securimage",
+				"version": "dev-master",
+				"source": {
+					"url": "https://github.com/primrix/securimage",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "primrix/spectrum",
+				"version": "dev-master",
+				"source": {
+					"url": "https://github.com/primrix/spectrum",
+					"type": "git",
+					"reference": "origin/master"
+				}
+			}
+		}
+	],
+	"require": {
+		"zurb/foundation": "5.*",
+		"tinymce/tinymce": "4.*",
+		"fortawesome/font-awesome": "4.*",
+		"primrix/securimage": "dev-master",
+		"primrix/spectrum": "dev-master",
+		"panique/laravel-sass": "dev-master"
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "James Dalgarno",
+			"email": "james@imagewebdesign.co.uk"
+		}
+	],
+	"autoload": {
+		"classmap": [
+			"main/application/controllers",
+			"main/application/controllers/admin",
+			"main/application/controllers/generic",
+			"main/application/handlers",
+			"main/application/models/admin",
+			"main/application/models/cms",
+			"site/application/controllers/site/"
+		],
+		"files": [
+			"site/config/def.php",
+			"vendor/primrix/securimage/securimage.php"
+		],
+		"psr-4": {
+			"main\\application\\controllers\\": "main/application/controllers",
+			"main\\application\\controllers\\admin\\": "main/application/controllers/admin",
+			"main\\application\\controllers\\site\\": "main/application/controllers/generic",
+			"main\\application\\controllers\\handlers\\": "main/application/handlers",
+			"main\\application\\models\\admin\\": "main/application/models/admin",
+			"main\\application\\models\\cms\\": "main/application/models/cms",
+			"site\\config\\": "site/config",
+			"vendor\\primrix\\securimage\\": "vendor/primrix/securimage"
+		}
+	}
+}

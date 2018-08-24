@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!--[if IE 9]><html class="lt-ie10" lang="en"><![endif]-->
+<html class="no-js" lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link href="/main/css/primrix_login.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="/main/css/primrix_forms.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="/main/css/brand.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="screen">
+
+		<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+		<link href="/vendor/fortawesome/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="/main/fonts/icomoon.css" rel="stylesheet">
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+		<script src="/main/scripts/primrix.js"></script>
+
+		<title>Test</title>
+	</head>
+
+	<body>
+
+		<div class="errorBox">
+			{error:username}
+			{error:password}
+			{error:captcha}
+			{login}
+		</div>
+
+		<div class="loginContainer">
+			
+			<div class="lines">
+				<div class="line1"><div class="primrixGradient"></div></div>
+				<div class="line2"><div class="primrixGradient"></div></div>		
+			</div>
+
+			<div class="loginBox">
+				<form method="post" action="" accept-charset="UTF-8">
+					
+					<!--<input name="_token" type="hidden" value="RaOPV4Q4VByf5iTSsx4QgkmTxrMCLNy2s4KJiL21">-->
+					
+					<div class="logoGrp">						
+						
+						<div class="loginFields">
+							<input type="text" id="username" name="username" style="width: 159px;" tabindex="1" placeholder="Username" value="{form:username}" maxlength="32">
+							<input type="password" id="password" name="password" style="width: 159px;" tabindex="1" placeholder="Password" value="" maxlength="128">
+						</div><!--loginFields-->
+						<div class="loginIcon"></div>
+
+					</div><!--logoGrp-->
+
+					<div class="captcha">
+
+						<input type="text" id="captcha" name="captcha" style="width: 159px; margin: 0px;" tabindex="1" placeholder="Captcha" value="" maxlength="6">
+						<div class="captchaCtrls">
+							<audio id="captchaAudioLogin" src="/vendor/primrix/securimage/securimage_play.php"></audio>
+							<div class="play"><a class="captchaSound" data-id="Login"><span class="fa fa-music" alt="Play as sound"></span></a></div>
+							<div class="reload"><a class="captchaReload" data-id="Login"><span class="fa fa-refresh" alt="Reload a new Captcha"></span></a></div>
+						</div><!--captchaCtrls-->
+						<div class="captchaImage"><img id="captchaImgLogin" src="/vendor/primrix/securimage/securimage_show.php" width="140" height="40" alt="Please type the characters shown"></div>
+
+					</div><!--captcha-->
+
+					<div class="submitGrp">
+
+						<div class="options">
+							<input type="checkbox" id="rememberMe" name="rememberMe" tabindex="1" value="yes"{form:rememberMe:yes}>
+							<label for="rememberMe" alt="Click this option to set a Cookie so that your username is remembered for the next time you need to login" class="freeStyleLabel">Remember me</label><br style="clear:both;">
+					 		<a href="/admin/login/reminder">Forgotten my login?</a>
+						</div><!--options-->					
+					
+						<div class="pLogo"><span class="primrix-primrix2" alt="Primrix"></span></div>
+						<div class="submitBtn"><input type="submit" name="submit" alt="Click to login" value="Login"></div>					 
+					
+					</div><!--submitGrp-->
+					
+					<div class="footerLegal">Copyright &copy; all rights reserved <?php echo date('Y'); ?></div>
+
+				</form>
+			</div><!--loginBox-->
+		</div><!--loginContainer-->
+	</body>
+</html>

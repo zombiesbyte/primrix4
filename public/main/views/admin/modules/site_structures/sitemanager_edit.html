@@ -1,0 +1,72 @@
+<div class="worktop">
+
+<div class="errorBox">
+	{error:name}
+	{error:linkList}
+	{error:link}
+	{error:new_tab}
+	{error:active}
+</div>
+
+	<form method="post" action="">
+		
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Site Structures <span class="fa fa-share"></span> Site Manager <span class="fa fa-share"></span> Edit Site Menu Item</h2>
+		</div><!--crumbs-->
+
+		<div class="twoColumns">
+
+			<label>Name</label>
+			<input type="text" id="name" name="name" tabindex="1" value="{form:name}" placeholder="Menu Item Name" alt="Menu Item Name">
+
+			<br style="clear:both;">
+
+			<label>Link</label>
+			
+			<input type="text" id="link" name="link" tabindex="1" value="{form:link}" placeholder="http://www.example.com" alt="Please make sure you include the full address if using an external URL">
+
+			<select id="linkList" name="linkList" class="hide" tabindex="1" alt="Please select an existing page from the list">
+				<option value=""></option>
+			</select>
+
+			<button type="submit" id="switch" name="switch" class="switchField" alt="Click to switch between a list of your pages and an open link" tabindex="1" data-f1="link|fa fa-link" data-f2="linkList|fa fa-list">
+				<span class="fa fa-link"></span> Switch
+			</button>
+
+			<br style="clear:both;">
+
+		</div><!--twoColumns-->
+		
+		<div class="twoColumns">
+
+			<fieldset>
+				<legend>Active</legend>
+				<input type="radio" id="active" name="active" tabindex="1" value="y" alt="Set as active"{form:active:y}><label for="active" class="freeStyleLabel">Active</label>
+				<input type="radio" id="active" name="active" tabindex="1" value="n" alt="Set as inactive"{form:active:n}><label for="active" class="freeStyleLabel">Inactive</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>Link opens in a new tab/window</legend>
+				<input type="checkbox" id="new_tab" name="new_tab" tabindex="1" value="y" alt="Ticking this box will force a new tab or window when the user clicks"{form:new_tab:y}><label for="new_tab" class="freeStyleLabel">Yes</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>User Rights</legend>
+
+				{checkboxRights}
+
+			</fieldset>
+			
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		
+		</div><!--twoColumns-->
+
+	</form>
+</div><!--worktop-->

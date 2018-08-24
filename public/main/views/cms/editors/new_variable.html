@@ -1,0 +1,125 @@
+<div class="worktop">
+
+<script type="text/javascript">
+
+	$(function() {
+		updateFieldType();
+		$('#fieldType').change(updateFieldType);
+	});
+
+	function updateFieldType()
+	{
+		$choice = $('#fieldType').val();
+
+		if($choice == 'selectbox' || $choice == 'checkbox'){
+			$('#fieldOptions').prop('disabled', false);
+			$('#fieldSet').prop('disabled', false);
+			$('#fieldMin').prop('disabled', false);
+			$('#fieldMax').prop('disabled', false);
+		}
+		else if($choice == 'image' || $choice == 'gallery'){
+			$('#fieldOptions').prop('disabled', false);
+			$('#fieldSet').prop('disabled', true);
+			$('#fieldMin').prop('disabled', true);
+			$('#fieldMax').prop('disabled', true);
+		}
+		else if($choice == 'palette'){
+			$('#fieldOptions').prop('disabled', true);
+			$('#fieldSet').prop('disabled', true);
+			$('#fieldMin').prop('disabled', true);
+			$('#fieldMax').prop('disabled', true);
+		}
+		else{
+			$('#fieldOptions').prop('disabled', true);
+			$('#fieldSet').prop('disabled', false);
+			$('#fieldMin').prop('disabled', false);
+			$('#fieldMax').prop('disabled', false);
+		}
+	}
+
+</script>
+
+<div class="errorBox">
+	{error:fieldType}
+	{error:fieldName}
+	{error:fieldDesc}
+	{error:fieldOptions}
+	{error:fieldSet}
+	{error:fieldMin}
+	{error:fieldMax}
+</div>
+
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Editors <span class="fa fa-share"></span> New Variable Setup</h2>
+		</div><!--crumbs-->
+
+		<div class="fieldNotes"><span class="fa fa-info-circle"></span>Please select your new variable type</div>
+
+		<div class="threeColumns">
+			<label>Field Type:</label>
+			<select id="fieldType" name="fieldType" tabindex="1">
+				<option value=''{form:fieldType:}>Please select a field type</option>
+				<option value='textbox'{form:fieldType:textbox}>TextBox</option>
+				<option value='textarea'{form:fieldType:textarea}>TextArea</option>
+				<option value='wysiwyg'{form:fieldType:wysiwyg}>WYSIWYG</option>
+				<option value='selectbox'{form:fieldType:selectbox}>SelectBox</option>
+				<option value='checkbox'{form:fieldType:checkbox}>CheckBox</option>			
+				<option value='palette'{form:fieldType:palette}>Palette</option>
+				<option value='image'{form:fieldType:image}>Image</option>
+				<option value='gallery'{form:fieldType:gallery}>Gallery</option>
+			</select>
+
+			<br style="clear:both;">
+
+			<label>Variable Name:</label>
+			<input type="text" id="fieldName" name="fieldName" tabindex="1" value="{form:fieldName}" alt="Your variable name">
+
+			<br style="clear:both;">
+
+			<label>Description/Notes:</label>
+			<textarea id="fieldDesc" name="fieldDesc" tabindex="1">{form:fieldDesc}</textarea>
+		</div><!--threeColumns-->
+
+		<div class="threeColumns">
+
+			<label>Field Options</label>
+			<textarea id="fieldOptions" name="fieldOptions" tabindex="1" alt="Each entry should be on its own line which will create a list of options for this field">{form:fieldOptions}</textarea>
+
+		</div><!--threeColumns-->
+
+		<div class="threeColumns">
+
+			<fieldset>			
+				<legend>Field Validation</legend>
+				
+				<label>Field Set:</label>
+				<select id="fieldSet" name="fieldSet" tabindex="1">
+					{fieldSetOptions}
+				</select>
+
+				<br style="clear:both;">
+
+				<label>Min</label>
+				<input type="text" id="fieldMin" name="fieldMin" tabindex="1" alt="Type the minimum characters or selections this field can have" value="{form:fieldMin}">
+			
+				<br style="clear:both;">
+
+				<label>Max</label>
+				<input type="text" id="fieldMax" name="fieldMax" tabindex="1" alt="Type the maximum characters or selections this field can have" value="{form:fieldMax}">			
+			</fieldset>
+	
+
+			<div class="submitRow">
+				<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+						<span class="fa fa-reply"></span> Cancel
+				</button>
+				<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+					<span class="fa fa-floppy-o"></span> Save
+				</button>
+			</div><!--submitRow-->
+		</div><!--threeColumns-->
+
+	</form>
+</div><!--worktop-->

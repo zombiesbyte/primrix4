@@ -1,0 +1,32 @@
+<div class="worktop">
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Content Centre <span class="fa fa-share"></span> Page Blueprints</h2>
+		</div><!--crumbs-->
+
+		<table id="menumanager">
+			<thead>
+				<tr>
+					<th class="small"><input type="checkbox" class="selectall-selection" alt="Select/Unselect all"></th>
+					<th class="txtLeft">Name</th>
+					<th class="txtLeft">Page Template</th>
+					<th class="small"><a class="toggleActiveGrp fa fa-check-square-o" alt="Activate/Deactivate selected"></a></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{table_rows}
+
+			</tbody>
+
+		</table>
+
+		<div class="submitRow">
+			<button type="submit" id="delete" name="delete" alt="Remove selected" tabindex="1">
+				<span class="fa fa-trash-o"></span> Remove
+			</button>
+		</div><!--submitRow-->
+	</form>
+</div><!--worktop-->

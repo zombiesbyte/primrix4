@@ -1,0 +1,41 @@
+<div class="worktop">
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2><span class="fa fa-folder-open"></span>Content Centre <span class="fa fa-share"></span> Site Content</h2>
+		</div><!--crumbs-->
+
+		<table id="menumanager">
+			<thead>
+				<tr>
+					<th class="small"><span class="expander fa fa-square" alt="Expand all" data-expander-id='all'></span></th>
+					<th class="small"><a data-order="top" class="order fa fa-angle-double-up" alt="Move selected to top"></a></th>
+					<th class="small"><a data-order="bottom" class="order fa fa-angle-double-down" alt="Move selected to bottom"></a></th>
+					<th class="small"><input type="checkbox" class="selectall-selection" alt="Select/Unselect all"></th>
+					<th class="txtLeft"></th>
+					<th class="txtLeft" alt="Uniform Resource Name - basically, anything after the domain name">URN <small>i.e. {fullDomainPath}/page-name</small></th>
+					<th class="small"><a class="toggleActiveGrp fa fa-check-square-o" alt="Activate/Deactivate selected"></a></th>
+					<th class="small"></th>
+					<th class="small"><a class="fa fa-users"></a></th>
+					<th class="small"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{table_rows}
+
+			</tbody>
+
+		</table>
+
+		<div class="submitRow">
+			<button type="submit" id="delete" name="delete" alt="Remove selected" tabindex="1">
+				<span class="fa fa-trash-o"></span> Remove
+			</button>
+			<button type="submit" id="add" name="add" alt="Add a new page" tabindex="1">
+				<span class="fa fa-plus-square"></span> Add
+			</button>
+		</div><!--submitRow-->
+	</form>
+</div><!--worktop-->

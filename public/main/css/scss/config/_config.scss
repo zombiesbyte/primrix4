@@ -1,0 +1,19 @@
+// Main theme variables
+$pBgColour1: #0b5394; //The primary background colour i.e. body background colour
+$pBgColour2: #073763; //The secondary background colour used on highlights, dialogues and boxes
+$pBgColour3: #031626; //The tertiary background colour used on shadows and other touches
+$pFgColour1: #c27ba0; //The primary foreground colour i.e. the first line colour
+$pFgColour2: #fffffe; //The secondary foreground colour i.e. the second line colour
+
+//font colours
+$pFtColour1: #6fa8dc; //The primary font colour i.e. headings font colour
+$pFt1Link_h: #000000; //The primary font colour hover
+$pFt1Link_d: #000000; //The primary font colour active (down)
+$pFtColour2: #fffffe; //The secondary font colour i.e paragraphs font colour
+
+$pToolTipBg: #3d85c6; //The tool tips background colour (95% opacity will be used)
+$MenuSelect: #a64d79; //The colour of a menu item when it is selected as currently active
+$tableRow_h: #a64d79; //The colour of a hovered row
+
+//forms
+$pFormBtnUp: #741b47; //The colour of our buttons (rest state)

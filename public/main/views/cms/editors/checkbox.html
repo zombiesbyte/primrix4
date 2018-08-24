@@ -1,0 +1,34 @@
+<div class="worktop">
+
+<div class="errorBox">
+	{error:field}
+</div>
+
+	<form method="post" action="">
+
+		<div class="crumbs">
+			<h2>
+				<span class="fa fa-folder-open"></span>{from} 
+				<span class="fa fa-share"></span> " {friendlyFieldName} " 
+				<span class="fa fa-share"></span> CheckBox Editor 
+				{editVariable}
+			</h2>
+		</div><!--crumbs-->
+
+		<div class="fieldNotes"><span class="fa fa-info-circle"></span>{fieldNotes}</div>
+
+		<div class="twoColumns">
+			{checkboxes}
+		</div>
+
+		<div class="submitRow">
+			<button type="submit" id="cancel" name="cancel" alt="Cancel" tabindex="1">
+					<span class="fa fa-reply"></span> Cancel
+			</button>
+			<button type="submit" id="save" name="save" alt="Save" tabindex="1">
+				<span class="fa fa-floppy-o"></span> Save
+			</button>
+		</div><!--submitRow-->
+
+	</form>
+</div><!--worktop-->

@@ -1,0 +1,22 @@
+Rules
+
+**Code Writing**
+Tabs should be set to size 4
+Tabs should be used to indent blocks and not spaces
+Loops and If statements should contain opening { on the same line i.e. if(true){
+Classes and methods should begin opening { on a new line
+
+
+**Naming Conventions**
+Controller class names should always be UpperCamelCase
+Variables should always be lowerCamelCase
+Array keys can be either lowerCamelCase or c_style_underscores
+SQL database fields should always be c_style_underscores
+Private or protected classes and variables should always start with a an _underscore
+Constants should always be created in UPPERCASE with C_STYLE_UNDERSCORES if necessary
+
+
+**General Use**
+There should always be a defaultcontroller.php controller within the destination
+There should always be an Index method within the controller
+Passwords should be hashed with Auth::hash using #|#|password|password as a form rule
